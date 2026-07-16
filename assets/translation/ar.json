@@ -1,0 +1,65 @@
+{
+  "auth": {
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "login": "تسجيل الدخول",
+    "forgotPassword": "نسيت كلمة المرور؟",
+    "welcome_Back": "مرحبًا بعودتك",
+    "signInToContinue": "سجل دخولك إلى حسابك في معمار دجلة للمتابعة",
+    "rememberMe": "تذكرني",
+    "dontHaveAccount": "ليس لديك حساب؟",
+    "createAccount": "إنشاء حساب",
+    "or": "أو",
+    "continueWithGoogle": "المتابعة باستخدام Google",
+    "enterEmail": "أدخل بريدك الإلكتروني",
+    "enterPassword": "أدخل كلمة المرور",
+    "emailRequired": "البريد الإلكتروني مطلوب",
+    "passwordRequired": "كلمة المرور مطلوبة",
+    "invalidEmail": "يرجى إدخال بريد إلكتروني صحيح",
+    "passwordTooShort": "يجب أن تكون كلمة المرور 6 أحرف على الأقل",
+    "resetPassword": "إعادة تعيين كلمة المرور",
+    "sendResetLink": "إرسال رابط الإعادة",
+    "backToLogin": "العودة لتسجيل الدخول",
+    "pleaseLoginToContinue": "يرجى تسجيل الدخول إلى  معمار دجلة ",
+    "thisFieldCantBeEmpty": "لا يمكن أن يكون هذا الحقل فارغًا",
+    "signInWithSingleOtp": "تسجيل الدخول باستخدام OTP واحد"
+  },
+  "home": {
+    "loyality_points": "نقاط الولاء",
+    "membership_degree": "ذهبي",
+    "on_hold_points": "نقاظ معلقة"
+  },
+  "profile": {
+    "settings": "الإعدادات",
+    "my_contracts": "عقودي",
+    "installments": "الأقساط",
+    "referral": "الإحالة",
+    "documents": "المستندات",
+    "support": "الدعم"
+  },
+  "nav": {
+    "home": "الرئيسية",
+    "offers": "العروض",
+    "wallet": "المحفظة",
+    "units": "الوحدات",
+    "profile": "الملف الشخصي"
+  },
+  "onboarding": {
+    "skip": "تخطى",
+    "next": "التالي",
+    "pages": [
+      {
+        "title": "مرحبًا بك في معمار دجلة",
+        "subtitle": "استكشف حسابك، العروض وإدارة عقودك بسهولة."
+      },
+      {
+        "title": "تابع أقساطك",
+        "subtitle": "ابقَ مطلعًا على دفعاتك وجداولك."
+      },
+      {
+        "title": "عروض حصرية",
+        "subtitle": "احصل على عروض ومكافآت الولاء المخصصة."
+      }
+    ]
+  }
+}
