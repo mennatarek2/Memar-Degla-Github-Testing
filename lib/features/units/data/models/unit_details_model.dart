@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:memar_degla/features/units/data/models/units_model.dart';
 
 class UnitDetailsModel {
