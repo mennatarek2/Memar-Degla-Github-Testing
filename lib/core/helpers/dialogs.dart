@@ -2,9 +2,9 @@
 import 'package:flutter/material.dart';
 import 'package:memar_degla/core/styles/text_styles.dart';
 import 'package:memar_degla/core/themes/theme_extention.dart';
-import 'package:memar_degla/core/widgets/custom_load_auth_button.dart';
 
 import 'package:memar_degla/core/widgets/custom_red_button.dart';
+import 'package:memar_degla/features/authentication/presentation/views/widgets/custom_loading_auth_button.dart';
 
 class RedeemConfirmationDialog extends StatelessWidget {
   const RedeemConfirmationDialog({

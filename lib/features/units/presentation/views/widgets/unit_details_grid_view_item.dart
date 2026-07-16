@@ -39,16 +39,13 @@ class UnitDetailsGridViewItem extends StatelessWidget {
             ),
           ),
 
-          FittedBox(
-            fit: BoxFit.scaleDown,
-            child: Text(
-              overflow: TextOverflow.ellipsis,
-              maxLines: 1,
-              subtitle,
-              style: AppStyles.styleBold16(
-                context,
-              ).copyWith(color: context.colors.textPrimary),
-            ),
+          Text(
+            overflow: TextOverflow.ellipsis,
+            maxLines: 1,
+            subtitle,
+            style: AppStyles.styleBold16(
+              context,
+            ).copyWith(color: context.colors.textPrimary),
           ),
         ],
       ),
