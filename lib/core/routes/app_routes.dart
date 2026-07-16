@@ -4,7 +4,6 @@ import 'package:memar_degla/features/contrcats/data/models/contracts_models.dart
 import 'package:memar_degla/features/contrcats/presentation/views/document_screen.dart';
 import 'package:memar_degla/features/contrcats/presentation/views/my_contracts_details_screen.dart';
 import 'package:memar_degla/features/contrcats/presentation/views/my_contracts_screen.dart';
-import 'package:memar_degla/features/contrcats/presentation/views/widgets/unit_details.dart';
 import 'package:memar_degla/features/onboarding/presentation/views/onboarding_screen.dart';
 import 'package:memar_degla/features/authentication/presentation/views/profile_screen.dart';
 import 'package:memar_degla/features/home/presentation/views/home_screen.dart';
