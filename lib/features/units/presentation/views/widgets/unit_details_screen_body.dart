@@ -5,8 +5,7 @@ import 'package:memar_degla/core/styles/text_styles.dart';
 import 'package:memar_degla/core/themes/theme_extention.dart';
 import 'package:memar_degla/features/units/data/models/unit_details_model.dart';
 import 'package:memar_degla/features/units/presentation/views/widgets/unit_galary.dart';
-import 'package:memar_degla/features/units/presentation/views/widgets/units_features.dart';
-import 'package:memar_degla/features/units/presentation/views/widgets/units_grid_view.dart';
+import 'package:memar_degla/features/units/presentation/views/widgets/units_details_page_view.dart';
 
 class UnitDetailsScreenBody extends StatelessWidget {
   const UnitDetailsScreenBody({super.key, required this._unitDetailsModel});
@@ -18,6 +17,7 @@ class UnitDetailsScreenBody extends StatelessWidget {
       slivers: [
         SliverToBoxAdapter(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               UnitGalleryStack(
                 imageUrls: const [
@@ -33,6 +33,7 @@ class UnitDetailsScreenBody extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(
                   horizontal: AppPaddings.horizontalPadding,
+                  vertical: AppPaddings.verticalPadding,
                 ),
                 child: Column(
                   children: [
@@ -44,7 +45,7 @@ class UnitDetailsScreenBody extends StatelessWidget {
                           style: AppStyles.styleSemiBold24(context),
                         ),
                         Text(
-                          _unitDetailsModel.unit.unitPrice,
+                          "EGP ${_unitDetailsModel.unit.unitPrice}",
 
                           style: AppStyles.styleSemiBold20(
                             context,
@@ -52,20 +53,7 @@ class UnitDetailsScreenBody extends StatelessWidget {
                         ),
                       ],
                     ),
-
-                    UnitsDetailsGridView(
-                      bedroomsNumber: _unitDetailsModel.bedroomsNumber,
-                      bathroomsNumber: _unitDetailsModel.bathroomsNumber,
-                      constructionEndDate:
-                          _unitDetailsModel.constructionEndDate,
-                      buildingName: _unitDetailsModel.buildingName,
-                      floorNumber: _unitDetailsModel.floorNumber,
-                      area: _unitDetailsModel.area,
-                    ),
-
-                    UnitFeaturesDetails(
-                      unitFeature: _unitDetailsModel.unitFeatures,
-                    ),
+                    UnitsDetailsPageView(unitDetailsModel: _unitDetailsModel),
                   ],
                 ),
               ),

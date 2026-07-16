@@ -244,7 +244,7 @@ class _InfoBadge extends StatelessWidget {
         unitType,
         style: AppStyles.styleBold16(
           context,
-        ).copyWith(color: context.colors.iconBackGround),
+        ).copyWith(color: context.colors.navActive),
       ),
     );
   }
@@ -267,7 +267,7 @@ class _CodeBadge extends StatelessWidget {
         unitCode,
         style: AppStyles.styleBold16(
           context,
-        ).copyWith(color: context.colors.iconBackGround),
+        ).copyWith(color: context.colors.navActive),
       ),
     );
   }

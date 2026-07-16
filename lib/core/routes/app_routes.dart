@@ -13,7 +13,6 @@ import 'package:memar_degla/features/support/presentation/views/support_screen.d
 import 'package:memar_degla/features/units/data/models/unit_details_model.dart';
 import 'package:memar_degla/features/units/presentation/views/unit_details_screen.dart';
 import 'package:memar_degla/features/units/presentation/views/units_screen.dart';
-import 'package:memar_degla/features/installments/presentation/views/installments_screen.dart';
 
 class AppRoutes {
   static const String splash = '/';
@@ -39,71 +38,14 @@ class AppRoutes {
   static const String unitDetails = '/unitDetails';
 
   static final GoRouter router = GoRouter(
-    initialLocation: splash,
+    initialLocation: units,
     routes: [
-      GoRoute(
-        path: splash,
-        name: 'splash',
-        builder: (context, state) => const SplashScreen(),
-      ),
-      GoRoute(
-        path: onBoarding,
-        name: 'onBoarding',
-        builder: (context, state) => const OnboardingScreen(),
-      ),
-      GoRoute(
-        path: login,
-        name: 'login',
-        builder: (context, state) => const LoginScreen(),
-      ),
-      GoRoute(
-        path: home,
-        name: 'home',
-        builder: (context, state) => const HomeScreen(),
-      ),
-      GoRoute(
-        path: profile,
-        name: 'profile',
-        builder: (context, state) => const ProfileScreen(),
-      ),
       GoRoute(
         path: units,
         name: 'units',
-        builder: (context, state) => const UnitsScreen(),
-      ),
-      GoRoute(
-        path: installments,
-        name: 'installments',
-        builder: (context, state) => const InstallmentsScreen(),
-      ),
-      GoRoute(
-        path: contracts,
-        name: 'myContracts',
-        builder: (context, state) => const MyContractsScreen(),
-      ),
-      GoRoute(
-        path: myCoontractsDetails,
-        name: 'myContractDetails',
         builder: (context, state) {
-          final contractModel = state.extra as ContractsModels;
-
-          return MyContractsDetailsScreen(contractsModels: contractModel);
+          return const UnitsScreen();
         },
-      ),
-      GoRoute(
-        path: support,
-        name: 'support',
-        builder: (context, state) => const SupportScreen(),
-      ),
-      GoRoute(
-        path: redeem,
-        name: 'redeemPoints',
-        builder: (context, state) => const RedeemPointsScreen(),
-      ),
-      GoRoute(
-        path: documents,
-        name: 'documents',
-        builder: (context, state) => const DocumentScreen(),
       ),
       GoRoute(
         path: unitDetails,
