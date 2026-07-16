@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:memar_degla/core/constants/app_padddings.dart';
 import 'package:memar_degla/core/constants/assets.dart';
-import 'package:memar_degla/core/styles/containers_style.dart';
 import 'package:memar_degla/core/styles/text_styles.dart';
 import 'package:memar_degla/core/themes/theme_extention.dart';
-import 'package:memar_degla/core/widgets/bullet_items.dart';
 import 'package:memar_degla/features/units/data/models/unit_details_model.dart';
+import 'package:memar_degla/features/units/presentation/views/widgets/payment_summary.dart';
 import 'package:memar_degla/features/units/presentation/views/widgets/unit_galary.dart';
 import 'package:memar_degla/features/units/presentation/views/widgets/units_features.dart';
 import 'package:memar_degla/features/units/presentation/views/widgets/units_grid_view.dart';
@@ -35,6 +34,7 @@ class UnitDetailsScreenBody extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(
                   horizontal: AppPaddings.horizontalPadding,
+                  vertical: AppPaddings.verticalPadding,
                 ),
                 child: Column(
                   children: [
@@ -67,6 +67,10 @@ class UnitDetailsScreenBody extends StatelessWidget {
 
                     UnitFeaturesDetails(
                       unitFeature: _unitDetailsModel.unitFeatures,
+                    ),
+                    const SizedBox(height: 20),
+                    PaymentSummary(
+                      unitTotalPrice: _unitDetailsModel.unit.unitPrice,
                     ),
                   ],
                 ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:memar_degla/core/themes/theme_extention.dart';
 
 class BulletItem extends StatelessWidget {
   const BulletItem({super.key, required this.text});
@@ -12,11 +13,11 @@ class BulletItem extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start, // key part
         children: [
-          const CircleAvatar(
-            minRadius: 5,
+          CircleAvatar(
+            minRadius: 7,
             maxRadius: 10,
-            backgroundColor: Color.fromARGB(255, 46, 110, 48),
-            child: FittedBox(
+            backgroundColor: context.colors.iconGreenBg,
+            child: const FittedBox(
               fit: BoxFit.scaleDown,
               child: Icon(Icons.check, color: Colors.white),
             ),
