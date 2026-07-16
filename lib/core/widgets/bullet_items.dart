@@ -16,7 +16,7 @@ class BulletItem extends StatelessWidget {
           CircleAvatar(
             minRadius: 7,
             maxRadius: 10,
-            backgroundColor: context.colors.iconGreenBg,
+            backgroundColor: context.colors.offerGreen,
             child: const FittedBox(
               fit: BoxFit.scaleDown,
               child: Icon(Icons.check, color: Colors.white),
