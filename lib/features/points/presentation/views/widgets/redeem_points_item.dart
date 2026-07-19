@@ -4,8 +4,8 @@ import 'package:memar_degla/core/constants/app_padddings.dart';
 import 'package:memar_degla/core/styles/containers_style.dart';
 import 'package:memar_degla/core/styles/text_styles.dart';
 import 'package:memar_degla/core/themes/theme_extention.dart';
+import 'package:memar_degla/core/widgets/custom_load_auth_button.dart';
 import 'package:memar_degla/core/widgets/sucess_widget.dart';
-import 'package:memar_degla/features/authentication/presentation/views/widgets/custom_loading_auth_button.dart';
 import 'package:memar_degla/features/points/data/models/points_model.dart';
 
 class PointsItem extends StatelessWidget {
