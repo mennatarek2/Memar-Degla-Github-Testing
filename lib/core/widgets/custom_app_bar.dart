@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:memar_degla/core/styles/text_styles.dart';
 import 'package:memar_degla/core/themes/theme_extention.dart';
+import 'package:memar_degla/core/widgets/animated_bell.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({super.key, this.title, this.onNotificationPressed});
@@ -16,6 +17,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     final canPop = context.canPop();
 
     return AppBar(
+      elevation: 0,
+      scrolledUnderElevation: 0,
+      surfaceTintColor: Colors.transparent,
       leading: canPop
           ? IconButton(
               onPressed: () => context.pop(),
@@ -23,20 +27,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             )
           : null,
       actions: [
-        IconButton(
-          icon: Icon(
-            shadows: const [
-              BoxShadow(
-                color: Colors.black,
-                blurRadius: 10,
-                offset: Offset(0, 4),
-              ),
-            ],
-
-            Icons.notifications,
-            color: context.colors.primaryGold,
-          ),
-          onPressed: onNotificationPressed,
+        GestureDetector(
+          onTap: onNotificationPressed,
+          child: const AnimatedBell(trigger: true),
         ),
       ],
       centerTitle: true,
