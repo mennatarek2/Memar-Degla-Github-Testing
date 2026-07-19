@@ -5,10 +5,10 @@ import 'package:memar_degla/features/contrcats/data/models/contracts_models.dart
 import 'package:memar_degla/features/contrcats/presentation/views/document_screen.dart';
 import 'package:memar_degla/features/contrcats/presentation/views/my_contracts_details_screen.dart';
 import 'package:memar_degla/features/contrcats/presentation/views/my_contracts_screen.dart';
-import 'package:memar_degla/features/contrcats/presentation/views/widgets/unit_details.dart';
 import 'package:memar_degla/features/onboarding/presentation/views/onboarding_screen.dart';
 import 'package:memar_degla/features/authentication/presentation/views/profile_screen.dart';
 import 'package:memar_degla/features/home/presentation/views/home_screen.dart';
+import 'package:memar_degla/features/points/presentation/views/offers_screen.dart';
 import 'package:memar_degla/features/points/presentation/views/redeem_points_screen.dart';
 import 'package:memar_degla/features/splash/presentation/views/splash_screen.dart';
 import 'package:memar_degla/features/support/presentation/views/support_screen.dart';
@@ -39,6 +39,7 @@ class AppRoutes {
   static const String support = '/profile/support';
   static const String redeem = '/redeem';
   static const String unitDetails = '/unitDetails';
+  static const String offersAndPoints = '/offers';
 
   static CustomTransitionPage<void> _fadeSlidePage({
     required GoRouterState state,
@@ -180,6 +181,14 @@ class AppRoutes {
             state: state,
             child: UnitDetailsScreen(unitDetailsModel: unitDetails),
           );
+        },
+      ),
+
+      GoRoute(
+        path: offers,
+        name: 'offers',
+        pageBuilder: (context, state) {
+          return _fadeSlidePage(state: state, child: const OffersScreen());
         },
       ),
     ],

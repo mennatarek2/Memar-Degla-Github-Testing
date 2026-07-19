@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:memar_degla/core/themes/theme_extention.dart';
 
 class AnimatedBell extends StatefulWidget {
