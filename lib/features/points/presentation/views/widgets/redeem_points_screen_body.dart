@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:memar_degla/core/constants/app_padddings.dart';
@@ -43,13 +44,15 @@ class RedeemPointsScreenBody extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "Available Balance",
+                            "points.available_balance".tr(),
                             style: AppStyles.styleMedium16(
                               context,
                             ).copyWith(color: color.textSecondary),
                           ),
                           Text(
-                            '12,450 Points',
+                            '12,450'
+                                    "points.points_balance"
+                                .tr(),
                             style: AppStyles.styleSemiBold24(context),
                           ),
                         ],

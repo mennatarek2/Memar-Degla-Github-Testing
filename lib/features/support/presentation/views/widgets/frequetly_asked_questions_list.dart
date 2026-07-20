@@ -27,8 +27,8 @@ class FrequetlyAskedQuestionsList extends StatelessWidget {
             children: questionsAndAnswerModel
                 .map(
                   (items) => FrequentlyAskedQuestions(
-                    title: items.titleQuestion,
-                    steps: items.steps,
+                    title: items.titleQuestionKey.tr(),
+                    steps: items.stepsKey.tr(),
                   ),
                 )
                 .toList(),

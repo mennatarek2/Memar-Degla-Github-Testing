@@ -87,9 +87,6 @@ class OffersCard extends StatelessWidget {
 
               const Spacer(),
 
-              // Benefit badge (e.g. "2x") — pushed to the far right,
-              // matching the partially-cropped pill visible at the
-              // right edge of the reference.
               Container(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 14,
@@ -135,22 +132,30 @@ class OffersCard extends StatelessWidget {
                   size: 20,
                 ),
                 const SizedBox(width: 8),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'points.limited_time_offer'.tr(),
-                      style: AppStyles.styleSemiBold16(
-                        context,
-                      ).copyWith(color: Colors.white),
-                    ),
-                    Text(
-                      endDate,
-                      style: AppStyles.styleMedium13(
-                        context,
-                      ).copyWith(color: Colors.white.withValues(alpha: 0.75)),
-                    ),
-                  ],
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text(
+                          'points.limited_time_offer'.tr(),
+                          style: AppStyles.styleSemiBold16(
+                            context,
+                          ).copyWith(color: Colors.white),
+                        ),
+                      ),
+                      FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text(
+                          endDate,
+                          style: AppStyles.styleMedium13(context).copyWith(
+                            color: Colors.white.withValues(alpha: 0.75),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
                 const Spacer(),
                 Text(

@@ -44,7 +44,8 @@ class PointsItem extends StatelessWidget {
                       ).copyWith(color: context.colors.textSecondary),
                     ),
                     Text(
-                      '${item.points} Points',
+                      '${item.points}'
+                      "points.points_balance",
                       style: AppStyles.styleBold16(
                         context,
                       ).copyWith(color: context.colors.navActive),

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:memar_degla/core/styles/containers_style.dart';
 import 'package:memar_degla/core/styles/text_styles.dart';
@@ -95,7 +96,7 @@ class ContractsCollapsedItem extends StatelessWidget {
               Row(
                 children: [
                   Text(
-                    'Details',
+                    'details'.tr(),
                     style: AppStyles.styleSemiBold16(
                       context,
                     ).copyWith(color: context.colors.textPrimary),

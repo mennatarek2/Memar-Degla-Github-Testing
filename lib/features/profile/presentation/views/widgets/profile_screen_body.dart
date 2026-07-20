@@ -104,13 +104,13 @@ class ProfileScreenBody extends StatelessWidget {
               onPressed: () {
                 RedeemConfirmationDialog.show(
                   context,
-                  title: 'common.confirm'.tr(),
-                  message: 'common.confirm'.tr(),
+                  title: 'settings_profile.logout'.tr(),
+                  message: 'settings_profile.logout_confirmation'.tr(),
                   onConfirm: () => GoRouter.of(context).pop(),
                   onCancel: () {},
                 );
               },
-              title: 'profile.logout'.tr(),
+              title: 'settings_profile.logout'.tr(),
             ),
           ],
         ),
