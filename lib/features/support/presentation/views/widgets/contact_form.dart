@@ -16,7 +16,7 @@ class ContactForm extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Contact Form", style: AppStyles.styleSemiBold24(context)),
+          Text("Contact Form", style: AppStyles.styleBold22(context)),
           const SizedBox(height: 20),
           const CustomizedTextField(label: "Enter your name"),
           const SizedBox(height: 10),

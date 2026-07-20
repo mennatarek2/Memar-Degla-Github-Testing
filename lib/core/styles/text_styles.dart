@@ -11,7 +11,7 @@ abstract class AppStyles {
     return TextStyle(
       color: colors.textPrimary,
       fontSize: getResponsiveFontSize(context, fontSize: 18),
-      fontFamily: 'Poppins',
+      fontFamily: 'Cairo',
       fontWeight: FontWeight.w500,
     );
   }
@@ -21,7 +21,7 @@ abstract class AppStyles {
     return TextStyle(
       color: colors.textPrimary,
       fontSize: getResponsiveFontSize(context, fontSize: 16),
-      fontFamily: 'Poppins',
+      fontFamily: 'Cairo',
       fontWeight: FontWeight.w700,
     );
   }
@@ -31,7 +31,7 @@ abstract class AppStyles {
     return TextStyle(
       color: colors.textPrimary,
       fontSize: getResponsiveFontSize(context, fontSize: 18),
-      fontFamily: 'Poppins',
+      fontFamily: 'Cairo',
       fontWeight: FontWeight.w700,
     );
   }
@@ -41,7 +41,7 @@ abstract class AppStyles {
     return TextStyle(
       color: colors.textPrimary,
       fontSize: getResponsiveFontSize(context, fontSize: 16),
-      fontFamily: 'Poppins',
+      fontFamily: 'Cairo',
       fontWeight: FontWeight.w500,
     );
   }
@@ -51,7 +51,7 @@ abstract class AppStyles {
     return TextStyle(
       color: colors.textPrimary,
       fontSize: getResponsiveFontSize(context, fontSize: 24),
-      fontFamily: 'Poppins',
+      fontFamily: 'Cairo',
       fontWeight: FontWeight.w500,
     );
   }
@@ -61,7 +61,7 @@ abstract class AppStyles {
     return TextStyle(
       color: colors.textPrimary,
       fontSize: getResponsiveFontSize(context, fontSize: 13),
-      fontFamily: 'Poppins',
+      fontFamily: 'Cairo',
       fontWeight: FontWeight.w500,
     );
   }
@@ -71,7 +71,7 @@ abstract class AppStyles {
     return TextStyle(
       color: colors.textPrimary,
       fontSize: getResponsiveFontSize(context, fontSize: 16),
-      fontFamily: 'Poppins',
+      fontFamily: 'Cairo',
       fontWeight: FontWeight.w600,
     );
   }
@@ -81,7 +81,7 @@ abstract class AppStyles {
     return TextStyle(
       color: colors.textPrimary,
       fontSize: getResponsiveFontSize(context, fontSize: 20),
-      fontFamily: 'Poppins',
+      fontFamily: 'Cairo',
       fontWeight: FontWeight.w600,
     );
   }
@@ -91,7 +91,7 @@ abstract class AppStyles {
     return TextStyle(
       color: colors.textPrimary,
       fontSize: getResponsiveFontSize(context, fontSize: 13),
-      fontFamily: 'Poppins',
+      fontFamily: 'Cairo',
       fontWeight: FontWeight.w400,
     );
   }
@@ -101,7 +101,7 @@ abstract class AppStyles {
     return TextStyle(
       color: colors.textPrimary,
       fontSize: getResponsiveFontSize(context, fontSize: 24),
-      fontFamily: 'Poppins',
+      fontFamily: 'Cairo',
       fontWeight: FontWeight.w600,
     );
   }
@@ -111,7 +111,7 @@ abstract class AppStyles {
     return TextStyle(
       color: colors.textPrimary,
       fontSize: getResponsiveFontSize(context, fontSize: 14),
-      fontFamily: 'Poppins',
+      fontFamily: 'Cairo',
       fontWeight: FontWeight.w400,
     );
   }
@@ -121,7 +121,7 @@ abstract class AppStyles {
     return TextStyle(
       color: colors.textPrimary,
       fontSize: getResponsiveFontSize(context, fontSize: 56),
-      fontFamily: 'Poppins',
+      fontFamily: 'Cairo',
       fontWeight: FontWeight.w600,
     );
   }
@@ -131,7 +131,7 @@ abstract class AppStyles {
     return TextStyle(
       color: colors.textPrimary,
       fontSize: getResponsiveFontSize(context, fontSize: 18),
-      fontFamily: 'Poppins',
+      fontFamily: 'Cairo',
       fontWeight: FontWeight.w600,
     );
   }
@@ -141,8 +141,28 @@ abstract class AppStyles {
     return TextStyle(
       color: colors.textPrimary,
       fontSize: getResponsiveFontSize(context, fontSize: 30),
-      fontFamily: 'Poppins',
+      fontFamily: 'Cairo',
       fontWeight: FontWeight.w600,
+    );
+  }
+
+  static TextStyle styleBold20(BuildContext context) {
+    final colors = _colors(context);
+    return TextStyle(
+      color: colors.textPrimary,
+      fontSize: getResponsiveFontSize(context, fontSize: 20),
+      fontFamily: 'Cairo',
+      fontWeight: FontWeight.w700,
+    );
+  }
+
+  static TextStyle styleBold22(BuildContext context) {
+    final colors = _colors(context);
+    return TextStyle(
+      color: colors.textPrimary,
+      fontSize: getResponsiveFontSize(context, fontSize: 22),
+      fontFamily: 'Cairo',
+      fontWeight: FontWeight.w700,
     );
   }
 
@@ -151,8 +171,78 @@ abstract class AppStyles {
     return TextStyle(
       color: colors.textPrimary,
       fontSize: getResponsiveFontSize(context, fontSize: 38),
-      fontFamily: 'Poppins',
+      fontFamily: 'Cairo',
       fontWeight: FontWeight.w600,
+    );
+  }
+
+  static TextStyle styleBold24(BuildContext context) {
+    final colors = _colors(context);
+    return TextStyle(
+      color: colors.textPrimary,
+      fontSize: getResponsiveFontSize(context, fontSize: 24),
+      fontFamily: 'Cairo',
+      fontWeight: FontWeight.w700,
+    );
+  }
+
+  static TextStyle styleBold26(BuildContext context) {
+    final colors = _colors(context);
+    return TextStyle(
+      color: colors.textPrimary,
+      fontSize: getResponsiveFontSize(context, fontSize: 26),
+      fontFamily: 'Cairo',
+      fontWeight: FontWeight.w700,
+    );
+  }
+
+  static TextStyle styleBold28(BuildContext context) {
+    final colors = _colors(context);
+    return TextStyle(
+      color: colors.textPrimary,
+      fontSize: getResponsiveFontSize(context, fontSize: 28),
+      fontFamily: 'Cairo',
+      fontWeight: FontWeight.w700,
+    );
+  }
+
+  static TextStyle styleBold30(BuildContext context) {
+    final colors = _colors(context);
+    return TextStyle(
+      color: colors.textPrimary,
+      fontSize: getResponsiveFontSize(context, fontSize: 30),
+      fontFamily: 'Cairo',
+      fontWeight: FontWeight.w700,
+    );
+  }
+
+  static TextStyle styleBold32(BuildContext context) {
+    final colors = _colors(context);
+    return TextStyle(
+      color: colors.textPrimary,
+      fontSize: getResponsiveFontSize(context, fontSize: 32),
+      fontFamily: 'Cairo',
+      fontWeight: FontWeight.w700,
+    );
+  }
+
+  static TextStyle styleBold34(BuildContext context) {
+    final colors = _colors(context);
+    return TextStyle(
+      color: colors.textPrimary,
+      fontSize: getResponsiveFontSize(context, fontSize: 34),
+      fontFamily: 'Cairo',
+      fontWeight: FontWeight.w700,
+    );
+  }
+
+  static TextStyle styleBold50(BuildContext context) {
+    final colors = _colors(context);
+    return TextStyle(
+      color: colors.textPrimary,
+      fontSize: getResponsiveFontSize(context, fontSize: 50),
+      fontFamily: 'Cairo',
+      fontWeight: FontWeight.w700,
     );
   }
 }

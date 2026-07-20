@@ -36,7 +36,7 @@ class CustomLoadingAuthButton extends StatelessWidget {
           title,
           style: AppStyles.styleSemiBold24(
             context,
-          ).copyWith(color: colors.primaryGold),
+          ).copyWith(color: colors.onNavy),
         ),
       ),
     );

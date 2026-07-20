@@ -39,7 +39,7 @@ class ContractDetailsContainer extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(contractCode, style: AppStyles.styleSemiBold30(context)),
+              Text(contractCode, style: AppStyles.styleBold30(context)),
               ContractStatusBadge(status: status),
             ],
           ),

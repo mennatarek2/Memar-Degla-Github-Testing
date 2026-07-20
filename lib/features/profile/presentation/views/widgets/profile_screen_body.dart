@@ -55,7 +55,7 @@ class ProfileScreenBody extends StatelessWidget {
                       // TODO: Navigate to my contracts screen
                     },
                   ),
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 8),
                   Divider(thickness: 1, color: context.colors.iconBackGround),
                   // Installments
                   ProfileItemWidget(
@@ -65,7 +65,7 @@ class ProfileScreenBody extends StatelessWidget {
                       GoRouter.of(context).push(AppRoutes.installments);
                     },
                   ),
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 8),
                   Divider(thickness: 1, color: context.colors.iconBackGround),
                   // Referral
                   ProfileItemWidget(
@@ -75,7 +75,7 @@ class ProfileScreenBody extends StatelessWidget {
                       GoRouter.of(context).push(AppRoutes.units);
                     },
                   ),
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 8),
                   Divider(thickness: 1, color: context.colors.iconBackGround),
                   // Documents
                   ProfileItemWidget(
@@ -85,7 +85,7 @@ class ProfileScreenBody extends StatelessWidget {
                       router.push(AppRoutes.documents);
                     },
                   ),
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 8),
                   Divider(thickness: 1.5, color: context.colors.iconBackGround),
                   // Support
                   ProfileItemWidget(

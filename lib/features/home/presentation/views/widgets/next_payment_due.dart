@@ -16,7 +16,7 @@ class NextPaymentDue extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('Payment Due:', style: AppStyles.styleSemiBold24(context)),
+        Text('Next Payment Due:', style: AppStyles.styleBold24(context)),
         const SizedBox(height: 20),
         Container(
           decoration: ContainersStyle.profileItemContainer(context),
@@ -51,16 +51,16 @@ class NextPaymentDue extends StatelessWidget {
                 children: [
                   Text(
                     "Amount:",
-                    style: AppStyles.styleMedium16(
+                    style: AppStyles.styleSemiBold16(
                       context,
                     ).copyWith(color: colors.textSecondary),
                   ),
 
                   Text(
                     "EGP ${lastInstallment.price}",
-                    style: AppStyles.styleSemiBold24(
+                    style: AppStyles.styleBold24(
                       context,
-                    ).copyWith(color: colors.navActive.withValues(alpha: 0.9)),
+                    ).copyWith(color: colors.navActive),
                   ),
                 ],
               ),
@@ -80,7 +80,7 @@ class _UnitData extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text(unitCode, style: AppStyles.styleSemiBold24(context)),
+        Text(unitCode, style: AppStyles.styleBold24(context)),
         const SizedBox(height: 10),
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),

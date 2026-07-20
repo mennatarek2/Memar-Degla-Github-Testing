@@ -62,13 +62,13 @@ class RedeemConfirmationDialog extends StatelessWidget {
             Text(
               title,
               textAlign: TextAlign.center,
-              style: AppStyles.styleSemiBold20(context),
+              style: AppStyles.styleBold24(context),
             ),
             const SizedBox(height: 12),
             Text(
               message,
               textAlign: TextAlign.center,
-              style: AppStyles.styleRegular14(
+              style: AppStyles.styleSemiBold20(
                 context,
               ).copyWith(color: colors.textSecondary),
             ),

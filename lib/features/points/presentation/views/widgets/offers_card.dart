@@ -86,9 +86,6 @@ class OffersCard extends StatelessWidget {
 
               const Spacer(),
 
-              // Benefit badge (e.g. "2x") — pushed to the far right,
-              // matching the partially-cropped pill visible at the
-              // right edge of the reference.
               Container(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 14,
@@ -100,7 +97,7 @@ class OffersCard extends StatelessWidget {
                 ),
                 child: Text(
                   offersBenfits,
-                  style: AppStyles.styleSemiBold16(
+                  style: AppStyles.styleBold16(
                     context,
                   ).copyWith(color: Colors.white),
                 ),
@@ -112,9 +109,7 @@ class OffersCard extends StatelessWidget {
 
           Text(
             title,
-            style: AppStyles.styleSemiBold24(
-              context,
-            ).copyWith(color: Colors.white),
+            style: AppStyles.styleBold24(context).copyWith(color: Colors.white),
           ),
 
           const SizedBox(height: 8),
@@ -145,7 +140,7 @@ class OffersCard extends StatelessWidget {
                     ),
                     Text(
                       endDate,
-                      style: AppStyles.styleMedium13(
+                      style: AppStyles.styleSemiBold16(
                         context,
                       ).copyWith(color: Colors.white.withValues(alpha: 0.75)),
                     ),
@@ -154,7 +149,7 @@ class OffersCard extends StatelessWidget {
                 const Spacer(),
                 Text(
                   "Details",
-                  style: AppStyles.styleSemiBold16(
+                  style: AppStyles.styleBold16(
                     context,
                   ).copyWith(color: Colors.white),
                 ),

@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:memar_degla/core/routes/app_routes.dart';
+import 'package:memar_degla/core/styles/text_styles.dart';
 import 'package:memar_degla/core/themes/app_theme.dart';
 import 'package:memar_degla/core/themes/theme_extention.dart';
 

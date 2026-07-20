@@ -44,13 +44,15 @@ class RedeemPointsScreenBody extends StatelessWidget {
                         children: [
                           Text(
                             "Available Balance",
-                            style: AppStyles.styleMedium16(
+                            style: AppStyles.styleBold18(
                               context,
                             ).copyWith(color: color.textSecondary),
                           ),
                           Text(
                             '12,450 Points',
-                            style: AppStyles.styleSemiBold24(context),
+                            style: AppStyles.styleBold22(
+                              context,
+                            ).copyWith(color: context.colors.onNavy),
                           ),
                         ],
                       ),

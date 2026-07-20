@@ -29,11 +29,11 @@ class ReachUs extends StatelessWidget {
         children: [
           FaIcon(icon),
           const SizedBox(height: 10),
-          Text(title, style: AppStyles.styleSemiBold20(context)),
+          Text(title, style: AppStyles.styleBold20(context)),
           const SizedBox(height: 10),
           Text(
             subTitle,
-            style: AppStyles.styleMedium16(
+            style: AppStyles.styleSemiBold16(
               context,
             ).copyWith(color: context.colors.textSecondary),
           ),

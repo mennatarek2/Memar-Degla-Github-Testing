@@ -23,7 +23,7 @@ class PointsCard extends StatelessWidget {
             children: [
               Text(
                 "home.loyality_points".tr(),
-                style: AppStyles.styleMedium18(context).copyWith(
+                style: AppStyles.styleSemiBold18(context).copyWith(
                   color: context.colors.primaryGold,
 
                   shadows: [

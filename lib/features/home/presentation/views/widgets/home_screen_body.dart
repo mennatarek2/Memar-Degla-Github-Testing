@@ -73,7 +73,7 @@ class HomeScreenBody extends StatelessWidget {
                   children: [
                     Text(
                       "Active Offers",
-                      style: AppStyles.styleSemiBold20(context),
+                      style: AppStyles.styleBold24(context),
                     ),
                     const Spacer(),
                     TextButton(
@@ -81,7 +81,7 @@ class HomeScreenBody extends StatelessWidget {
                           GoRouter.of(context).push(AppRoutes.offers),
                       child: Text(
                         "View All",
-                        style: AppStyles.styleSemiBold20(
+                        style: AppStyles.styleBold20(
                           context,
                         ).copyWith(color: context.colors.primaryGold),
                       ),

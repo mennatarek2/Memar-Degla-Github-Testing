@@ -32,11 +32,11 @@ class ProfileItemWidget extends StatelessWidget {
               padding: const EdgeInsets.all(12),
               child: Image.asset(iconPath, color: context.colors.icon),
             ),
-            const SizedBox(width: 20),
+            const SizedBox(width: 16),
             // Title
             Text(
               titleKey.tr(),
-              style: AppStyles.styleSemiBold18(
+              style: AppStyles.styleBold18(
                 context,
               ).copyWith(color: context.colors.textPrimary),
             ),

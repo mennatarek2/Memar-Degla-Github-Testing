@@ -46,7 +46,7 @@ class LoginScreenBody extends StatelessWidget {
                   softWrap: true,
                   locale: context.locale,
                   "auth.welcome_Back".tr(),
-                  style: AppStyles.styleSemiBold38(
+                  style: AppStyles.styleBold32(
                     context,
                   ).copyWith(color: colors.onPrimaryGold),
                 ),
@@ -55,7 +55,7 @@ class LoginScreenBody extends StatelessWidget {
               Center(
                 child: Text(
                   "auth.signInToContinue".tr(),
-                  style: AppStyles.styleMedium18(
+                  style: AppStyles.styleSemiBold18(
                     context,
                   ).copyWith(color: colors.textSecondary),
                 ),
@@ -63,7 +63,7 @@ class LoginScreenBody extends StatelessWidget {
               const SizedBox(height: 30),
               Text(
                 "auth.enterEmail".tr(),
-                style: AppStyles.styleSemiBold16(
+                style: AppStyles.styleSemiBold18(
                   context,
                 ).copyWith(color: colors.textSecondary),
               ),
@@ -78,7 +78,7 @@ class LoginScreenBody extends StatelessWidget {
               const SizedBox(height: 20),
               Text(
                 "auth.enterPassword".tr(),
-                style: AppStyles.styleSemiBold16(
+                style: AppStyles.styleSemiBold18(
                   context,
                 ).copyWith(color: colors.textSecondary),
               ),
@@ -98,7 +98,7 @@ class LoginScreenBody extends StatelessWidget {
                   },
                   child: Text(
                     "auth.forgotPassword".tr(),
-                    style: AppStyles.styleSemiBold18(
+                    style: AppStyles.styleBold18(
                       context,
                     ).copyWith(color: colors.onPrimaryGold),
                   ),

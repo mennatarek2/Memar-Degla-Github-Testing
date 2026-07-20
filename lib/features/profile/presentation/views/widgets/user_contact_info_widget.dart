@@ -42,7 +42,7 @@ class UserContactInfoWidget extends StatelessWidget {
                   children: [
                     Text(
                       email,
-                      style: AppStyles.styleSemiBold16(
+                      style: AppStyles.styleBold16(
                         context,
                       ).copyWith(color: context.colors.textPrimary),
                       maxLines: 1,
@@ -77,7 +77,7 @@ class UserContactInfoWidget extends StatelessWidget {
                   children: [
                     Text(
                       phone,
-                      style: AppStyles.styleSemiBold18(
+                      style: AppStyles.styleBold18(
                         context,
                       ).copyWith(color: context.colors.textPrimary),
                       maxLines: 1,

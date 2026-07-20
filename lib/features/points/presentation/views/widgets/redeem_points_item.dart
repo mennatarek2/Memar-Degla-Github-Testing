@@ -35,10 +35,10 @@ class PointsItem extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(item.title, style: AppStyles.styleSemiBold20(context)),
+                    Text(item.title, style: AppStyles.styleBold20(context)),
                     Text(
                       item.subtitle,
-                      style: AppStyles.styleMedium16(
+                      style: AppStyles.styleSemiBold16(
                         context,
                       ).copyWith(color: context.colors.textSecondary),
                     ),

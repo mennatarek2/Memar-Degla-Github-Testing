@@ -26,14 +26,14 @@ class ContactCard extends StatelessWidget {
             children: [
               Text(
                 "Email Support",
-                style: AppStyles.styleMedium18(
+                style: AppStyles.styleBold18(
                   context,
                 ).copyWith(color: colors.textSecondary),
               ),
 
               Text(
                 "Support@memaardegla.com",
-                style: AppStyles.styleSemiBold20(context),
+                style: AppStyles.styleBold20(context),
               ),
             ],
           ),

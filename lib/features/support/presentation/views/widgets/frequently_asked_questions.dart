@@ -44,7 +44,7 @@ class _FrequentlyAskedQuestionsState extends State<FrequentlyAskedQuestions> {
                     Expanded(
                       child: Text(
                         widget.title,
-                        style: AppStyles.styleSemiBold24(context),
+                        style: AppStyles.styleBold20(context),
                       ),
                     ),
                     AnimatedRotation(

@@ -27,7 +27,7 @@ class FeatureSectionDisplay extends StatelessWidget {
                   children: [
                     Text(
                       "4",
-                      style: AppStyles.styleSemiBold30(
+                      style: AppStyles.styleBold30(
                         context,
                       ).copyWith(color: context.colors.textPrimary),
                     ),
@@ -49,7 +49,7 @@ class FeatureSectionDisplay extends StatelessWidget {
                   children: [
                     Text(
                       "Units",
-                      style: AppStyles.styleSemiBold24(
+                      style: AppStyles.styleBold30(
                         context,
                       ).copyWith(color: context.colors.textPrimary),
                     ),
@@ -93,7 +93,7 @@ class ContractDisplaySection extends StatelessWidget {
                   children: [
                     Text(
                       "3",
-                      style: AppStyles.styleSemiBold30(
+                      style: AppStyles.styleBold30(
                         context,
                       ).copyWith(color: context.colors.textPrimary),
                     ),
@@ -115,7 +115,7 @@ class ContractDisplaySection extends StatelessWidget {
                   children: [
                     Text(
                       "Contracts",
-                      style: AppStyles.styleSemiBold24(
+                      style: AppStyles.styleBold30(
                         context,
                       ).copyWith(color: context.colors.textPrimary),
                     ),

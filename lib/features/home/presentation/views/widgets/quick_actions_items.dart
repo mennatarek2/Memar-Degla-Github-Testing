@@ -53,7 +53,7 @@ class QuickActionsItems extends StatelessWidget {
           const SizedBox(height: 10),
           Text(
             model.actionTitle,
-            style: AppStyles.styleMedium13(context).copyWith(),
+            style: AppStyles.styleBold16(context).copyWith(),
           ),
         ],
       ),

@@ -44,7 +44,7 @@ class CustomRedButton extends StatelessWidget {
               ],
               Text(
                 title,
-                style: AppStyles.styleSemiBold16(
+                style: AppStyles.styleBold20(
                   context,
                 ).copyWith(color: colors.error),
               ),

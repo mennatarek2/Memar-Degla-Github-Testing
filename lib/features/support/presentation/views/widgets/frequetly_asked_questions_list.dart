@@ -19,7 +19,7 @@ class FrequetlyAskedQuestionsList extends StatelessWidget {
         children: [
           Text(
             "Frequently Asked Questions",
-            style: AppStyles.styleSemiBold24(context),
+            style: AppStyles.styleBold20(context),
           ),
           const SizedBox(height: 20),
           Column(
