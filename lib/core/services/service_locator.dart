@@ -1,8 +1,11 @@
 import 'package:get_it/get_it.dart';
 import 'package:memar_degla/core/services/image_picker_services.dart';
+import 'package:memar_degla/features/profile/data/data_source/user_profile_local_data_source.dart';
 import 'package:memar_degla/features/profile/data/profile_local_data_source.dart';
 import 'package:memar_degla/features/profile/data/repos/profile_repo_impl.dart';
+import 'package:memar_degla/features/profile/data/repos/user_repo_impelmentation.dart';
 import 'package:memar_degla/features/profile/domain/repo/profile_repo.dart';
+import 'package:memar_degla/features/profile/domain/repo/user_repo.dart';
 import 'package:memar_degla/features/profile/domain/useCases/clear_saved_picture_use_case.dart';
 import 'package:memar_degla/features/profile/domain/useCases/get_saved_profile_picture_use_case.dart';
 import 'package:memar_degla/features/profile/domain/useCases/save_profile_picture_use_case.dart';
@@ -18,6 +21,7 @@ Future<void> initServiceLocator() async {
   await _registerExternal();
   _registerCoreServices();
   _registerProfilePictureFeature();
+  _regiterUserProfileFeature();
 }
 
 /// Third-party dependencies that need async setup or are shared across
@@ -30,6 +34,18 @@ Future<void> _registerExternal() async {
 
 void _registerCoreServices() {
   sl.registerLazySingleton<ImagePickerService>(() => ImagePickerService());
+}
+
+void _regiterUserProfileFeature() {
+  // Data layer
+  sl.registerLazySingleton<UserProfileLocalDataSource>(
+    () => UserProfileLocalDataSourceImpl(sl<SharedPreferences>()),
+  );
+  sl.registerLazySingleton<UserRepo>(
+    () => UserRepoImpelmentation(
+      userLocalDataSource: sl<UserProfileLocalDataSource>(),
+    ),
+  );
 }
 
 void _registerProfilePictureFeature() {
