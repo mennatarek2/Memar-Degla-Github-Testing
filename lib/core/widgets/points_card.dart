@@ -13,9 +13,8 @@ class PointsCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colors = context.colors;
     return Container(
-      padding: const EdgeInsets.all(AppPaddings.containerPadding),
+      padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
       decoration: ContainersStyle.pointsContainer(context),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -24,8 +23,8 @@ class PointsCard extends StatelessWidget {
             children: [
               Text(
                 "home.loyality_points".tr(),
-                style: AppStyles.styleMedium16(context).copyWith(
-                  color: context.colors.navActive,
+                style: AppStyles.styleMedium18(context).copyWith(
+                  color: context.colors.primaryGold,
 
                   shadows: [
                     const Shadow(
@@ -40,7 +39,7 @@ class PointsCard extends StatelessWidget {
               const MemberShipDegreeContainer(),
             ],
           ),
-          const SizedBox(height: 30),
+          const SizedBox(height: 20),
           const CounterText(targetValue: 12250),
           const SizedBox(height: 10),
           Row(
@@ -48,14 +47,13 @@ class PointsCard extends StatelessWidget {
               OnHoldPointsContainer(title: "850 ${"home.on_hold_points".tr()}"),
               const SizedBox(width: 10),
               Text(
-                "~ EGP 1250",
-                style: AppStyles.styleSemiBold24(context).copyWith(
-                  color: context.colors.navActive.withValues(alpha: 0.7),
-                ),
+                "~ EGP 1,250",
+                style: AppStyles.styleSemiBold20(
+                  context,
+                ).copyWith(color: const Color(0xFFA7845A)),
               ),
             ],
           ),
-          const SizedBox(height: 20),
         ],
       ),
     );

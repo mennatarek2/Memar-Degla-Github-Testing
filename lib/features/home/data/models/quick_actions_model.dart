@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:memar_degla/constants/assets.dart';
+import 'package:memar_degla/core/constants/assets.dart';
 import 'package:memar_degla/core/routes/app_routes.dart';
 
 class QuickActionsModel {

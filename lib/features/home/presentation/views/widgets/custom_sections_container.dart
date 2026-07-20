@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:memar_degla/constants/assets.dart';
+import 'package:memar_degla/core/constants/assets.dart';
 import 'package:memar_degla/core/constants/app_padddings.dart';
 import 'package:memar_degla/core/styles/containers_style.dart';
 import 'package:memar_degla/core/styles/text_styles.dart';
@@ -36,8 +36,11 @@ class FeatureSectionDisplay extends StatelessWidget {
                       padding: const EdgeInsets.all(8),
                       decoration: ContainersStyle.profileItemIconContainer(
                         context,
+                      ).copyWith(color: const Color(0XFFF7F0DE)),
+                      child: FaIcon(
+                        FontAwesomeIcons.buildingUser,
+                        color: context.colors.primaryGold,
                       ),
-                      child: const FaIcon(FontAwesomeIcons.buildingUser),
                     ),
                   ],
                 ),
@@ -51,13 +54,10 @@ class FeatureSectionDisplay extends StatelessWidget {
                       ).copyWith(color: context.colors.textPrimary),
                     ),
                     const Spacer(),
-                    CircleAvatar(
-                      backgroundColor: Colors.transparent,
-                      radius: 10,
-                      child: Icon(
-                        Icons.arrow_forward_ios,
-                        color: context.colors.textPrimary,
-                      ),
+                    Icon(
+                      Icons.arrow_forward_ios,
+                      size: 15,
+                      color: context.colors.textPrimary,
                     ),
                   ],
                 ),
@@ -78,9 +78,10 @@ class ContractDisplaySection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(AppPaddings.containerPadding),
-      decoration: ContainersStyle.contractsAndUnitsContainer(
-        context,
-      ).copyWith(color: context.colors.containerBackground),
+      decoration: ContainersStyle.contractsAndUnitsContainer(context).copyWith(
+        // color: context.colors.containerBackground
+        color: const Color(0xFFFFF9ED),
+      ),
 
       child: Row(
         children: [
@@ -91,7 +92,7 @@ class ContractDisplaySection extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      "2",
+                      "3",
                       style: AppStyles.styleSemiBold30(
                         context,
                       ).copyWith(color: context.colors.textPrimary),
@@ -101,10 +102,10 @@ class ContractDisplaySection extends StatelessWidget {
                       padding: const EdgeInsets.all(8),
                       decoration: ContainersStyle.profileItemIconContainer(
                         context,
-                      ),
+                      ).copyWith(color: const Color(0xFFF7F0DE)),
                       child: Image.asset(
                         Assets.assetsIconsMyContractIcon,
-                        color: context.colors.textPrimary,
+                        color: context.colors.primaryGold,
                       ),
                     ),
                   ],
@@ -119,13 +120,10 @@ class ContractDisplaySection extends StatelessWidget {
                       ).copyWith(color: context.colors.textPrimary),
                     ),
                     const Spacer(),
-                    CircleAvatar(
-                      backgroundColor: Colors.transparent,
-                      radius: 10,
-                      child: Icon(
-                        Icons.arrow_forward_ios,
-                        color: context.colors.textPrimary,
-                      ),
+                    Icon(
+                      Icons.arrow_forward_ios,
+                      size: 15,
+                      color: context.colors.textPrimary,
                     ),
                   ],
                 ),

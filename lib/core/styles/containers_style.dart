@@ -19,32 +19,29 @@ abstract class ContainersStyle {
         shadows: [
           BoxShadow(
             offset: const Offset(0, 0.5),
-            color: context.colors.navActive,
+            color: const Color(0xFF422C0D).withValues(alpha: 0.9),
             blurRadius: 0.2,
             spreadRadius: 1,
-            blurStyle: BlurStyle.solid,
+            blurStyle: BlurStyle.outer,
           ),
         ],
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
-          side: BorderSide(color: context.colors.navActive, width: 1.5),
+          side: BorderSide(color: context.colors.primaryGold, width: 0.5),
         ),
       );
   static ShapeDecoration onHoldPointsContainer(BuildContext context) =>
       ShapeDecoration(
         color: const Color(0xFF3E3E35),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
-          side: BorderSide(color: context.colors.border, width: 1.5),
-        ),
-        shadows: [
-          BoxShadow(
-            offset: const Offset(0, 0.5),
-            color: context.colors.navActive,
-            blurRadius: 0.2,
-            spreadRadius: 1,
-            blurStyle: BlurStyle.solid,
-          ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        shadows: const [
+          // BoxShadow(
+          //   offset: const Offset(0, 0.5),
+          //   color: context.colors.navActive,
+          //   blurRadius: 0.2,
+          //   spreadRadius: 1,
+          //   blurStyle: BlurStyle.solid,
+          // ),
         ],
       );
   static BoxDecoration redButtonStyle(BuildContext context) => BoxDecoration(

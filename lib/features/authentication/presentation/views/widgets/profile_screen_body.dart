@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:memar_degla/constants/assets.dart';
+import 'package:memar_degla/core/constants/assets.dart';
 import 'package:memar_degla/core/constants/app_padddings.dart';
 import 'package:memar_degla/core/helpers/dialogs.dart';
 import 'package:memar_degla/core/routes/app_routes.dart';

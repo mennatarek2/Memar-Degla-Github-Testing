@@ -30,14 +30,14 @@ class LoginScreenBody extends StatelessWidget {
           key: _formKey,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-
+            mainAxisAlignment: MainAxisAlignment.end,
             children: [
               SizedBox(height: MediaQuery.of(context).size.height * 0.1),
               Center(
                 child: CircleAvatar(
-                  radius: 90,
+                  radius: 50,
                   backgroundColor: Colors.transparent,
-                  child: Image.asset(Assets.assetsImagesLogo),
+                  child: Image.asset(Assets.assetsImagesDeglaBlackLogo),
                 ),
               ),
               const SizedBox(height: 20),
@@ -46,7 +46,7 @@ class LoginScreenBody extends StatelessWidget {
                   softWrap: true,
                   locale: context.locale,
                   "auth.welcome_Back".tr(),
-                  style: AppStyles.styleSemiBold30(
+                  style: AppStyles.styleSemiBold38(
                     context,
                   ).copyWith(color: colors.onPrimaryGold),
                 ),
@@ -55,7 +55,7 @@ class LoginScreenBody extends StatelessWidget {
               Center(
                 child: Text(
                   "auth.signInToContinue".tr(),
-                  style: AppStyles.styleMedium16(
+                  style: AppStyles.styleMedium18(
                     context,
                   ).copyWith(color: colors.textSecondary),
                 ),
@@ -63,7 +63,7 @@ class LoginScreenBody extends StatelessWidget {
               const SizedBox(height: 30),
               Text(
                 "auth.enterEmail".tr(),
-                style: AppStyles.styleMedium13(
+                style: AppStyles.styleSemiBold16(
                   context,
                 ).copyWith(color: colors.textSecondary),
               ),
@@ -78,7 +78,7 @@ class LoginScreenBody extends StatelessWidget {
               const SizedBox(height: 20),
               Text(
                 "auth.enterPassword".tr(),
-                style: AppStyles.styleMedium13(
+                style: AppStyles.styleSemiBold16(
                   context,
                 ).copyWith(color: colors.textSecondary),
               ),
@@ -98,7 +98,7 @@ class LoginScreenBody extends StatelessWidget {
                   },
                   child: Text(
                     "auth.forgotPassword".tr(),
-                    style: AppStyles.styleSemiBold16(
+                    style: AppStyles.styleSemiBold18(
                       context,
                     ).copyWith(color: colors.onPrimaryGold),
                   ),

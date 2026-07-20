@@ -5,6 +5,7 @@ import 'package:memar_degla/core/routes/app_routes.dart';
 import 'package:memar_degla/core/widgets/points_card.dart';
 import 'package:memar_degla/features/home/presentation/views/widgets/custom_sections_container.dart';
 import 'package:memar_degla/features/home/presentation/views/widgets/next_payment_due.dart';
+import 'package:memar_degla/features/home/presentation/views/widgets/offers_page_view.dart';
 import 'package:memar_degla/features/home/presentation/views/widgets/quick_actions.dart';
 
 class HomeScreenBody extends StatelessWidget {
@@ -61,7 +62,19 @@ class HomeScreenBody extends StatelessWidget {
           const SliverToBoxAdapter(
             child: SizedBox(height: 120, child: QuickActions()),
           ),
-          const SliverToBoxAdapter(child: Column(children: [NextPaymentDue()])),
+          const SliverToBoxAdapter(
+            child: Column(
+              children: [
+                NextPaymentDue(),
+                SizedBox(height: 30),
+                SizedBox(
+                  height: 300, // match OffersCard's height
+                  child: OffersCardsPageView(),
+                ),
+                SizedBox(height: 30),
+              ],
+            ),
+          ),
         ],
       ),
     );

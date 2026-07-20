@@ -25,8 +25,8 @@ class AppColors extends ThemeExtension<AppColors> {
     required this.iconBlueBg,
     required this.iconGreenBg,
     required this.iconGoldBg,
-    required this.iconPurpleBg,
-    required this.iconTealBg,
+    required this.textFieldBg,
+    required this.textFieldIcon,
     required this.navActive,
     required this.navInactive,
     required this.shadow,
@@ -35,6 +35,7 @@ class AppColors extends ThemeExtension<AppColors> {
     required this.icon,
     required this.iconBackGround,
     required this.buttonBg,
+    required this.textFieldBorder,
   });
 
   // Base surfaces
@@ -72,8 +73,8 @@ class AppColors extends ThemeExtension<AppColors> {
   final Color iconBlueBg;
   final Color iconGreenBg;
   final Color iconGoldBg;
-  final Color iconPurpleBg;
-  final Color iconTealBg;
+  final Color textFieldBg;
+  final Color textFieldIcon;
 
   // Bottom navigation
   final Color navActive;
@@ -85,14 +86,16 @@ class AppColors extends ThemeExtension<AppColors> {
   final Color icon;
   final Color iconBackGround;
   final Color buttonBg;
+  final Color textFieldBorder;
 
   static const light = AppColors(
     icon: Color(0xFF1B2A4A),
     scaffoldBackground: Color(0xFFF0F3F7),
     surface: Color(0xFFFFFFFF),
+    textFieldBorder: Color(0xFFE6E7EB),
     containerBackground: Color(0xFFFFFFFF),
     surfaceVariant: Color(0xFFF5EFDD),
-    primaryGold: Color(0xFFC9A227),
+    primaryGold: Color(0XFFBFA664),
     onPrimaryGold: Color(0xFF1B2A4A),
     navy: Color(0xFF1B2A4A),
     onNavy: Color(0xFFC9A227),
@@ -111,8 +114,8 @@ class AppColors extends ThemeExtension<AppColors> {
     iconBlueBg: Color(0xFFDCE9F7),
     iconGreenBg: Color(0xFFDCF5E7),
     iconGoldBg: Color(0xFFF5E9D0),
-    iconPurpleBg: Color(0xFFEDE0F7),
-    iconTealBg: Color(0xFFD9F2F0),
+    textFieldBg: Color(0xFFEFF0F4),
+    textFieldIcon: Color(0XFF6E727D),
     navActive: Color(0xFFC9A227),
     navInactive: Color(0xFF9AA0AC),
     shadow: Color.fromARGB(255, 19, 18, 18),
@@ -125,6 +128,7 @@ class AppColors extends ThemeExtension<AppColors> {
     navBarBackground: Color(0xFF171A23),
     scaffoldBackground: Color(0xFF0B0B0F),
     surface: Color(0xFF171A23),
+    textFieldBorder: Color(0xFF262D37),
     surfaceVariant: Color(0xFF1A2540),
     primaryGold: Color(0xFF1B2A4A),
     onPrimaryGold: Color(0xFFC9A227),
@@ -145,8 +149,8 @@ class AppColors extends ThemeExtension<AppColors> {
     iconBlueBg: Color(0xFF1B2B45),
     iconGreenBg: Color(0xFF163A2A),
     iconGoldBg: Color(0xFF3A2E14),
-    iconPurpleBg: Color(0xFF2A1F3D),
-    iconTealBg: Color(0xFF163936),
+    textFieldBg: Color(0xff1D2228),
+    textFieldIcon: Color(0XFF8C909B),
     navActive: Color(0xFFD4AF37),
     navInactive: Color(0xFF6B7280),
     shadow: Color(0xFFFFFFFF),
@@ -190,9 +194,11 @@ class AppColors extends ThemeExtension<AppColors> {
     Color? icon,
     Color? iconBackGround,
     Color? buttonBg,
+    Color? textFieldBorder,
   }) {
     return AppColors(
       scaffoldBackground: scaffoldBackground ?? this.scaffoldBackground,
+      textFieldBorder: textFieldBorder ?? this.textFieldBorder,
       surface: surface ?? this.surface,
       surfaceVariant: surfaceVariant ?? this.surfaceVariant,
       primaryGold: primaryGold ?? this.primaryGold,
@@ -214,8 +220,8 @@ class AppColors extends ThemeExtension<AppColors> {
       iconBlueBg: iconBlueBg ?? this.iconBlueBg,
       iconGreenBg: iconGreenBg ?? this.iconGreenBg,
       iconGoldBg: iconGoldBg ?? this.iconGoldBg,
-      iconPurpleBg: iconPurpleBg ?? this.iconPurpleBg,
-      iconTealBg: iconTealBg ?? this.iconTealBg,
+      textFieldBg: iconPurpleBg ?? textFieldBg,
+      textFieldIcon: iconTealBg ?? textFieldIcon,
       navActive: navActive ?? this.navActive,
       navInactive: navInactive ?? this.navInactive,
       shadow: shadow ?? this.shadow,
@@ -237,6 +243,7 @@ class AppColors extends ThemeExtension<AppColors> {
         t,
       )!,
       surface: Color.lerp(surface, other.surface, t)!,
+      textFieldBorder: Color.lerp(textFieldBorder, other.textFieldBorder, t)!,
       surfaceVariant: Color.lerp(surfaceVariant, other.surfaceVariant, t)!,
       primaryGold: Color.lerp(primaryGold, other.primaryGold, t)!,
       onPrimaryGold: Color.lerp(onPrimaryGold, other.onPrimaryGold, t)!,
@@ -257,8 +264,8 @@ class AppColors extends ThemeExtension<AppColors> {
       iconBlueBg: Color.lerp(iconBlueBg, other.iconBlueBg, t)!,
       iconGreenBg: Color.lerp(iconGreenBg, other.iconGreenBg, t)!,
       iconGoldBg: Color.lerp(iconGoldBg, other.iconGoldBg, t)!,
-      iconPurpleBg: Color.lerp(iconPurpleBg, other.iconPurpleBg, t)!,
-      iconTealBg: Color.lerp(iconTealBg, other.iconTealBg, t)!,
+      textFieldBg: Color.lerp(textFieldBg, other.textFieldBg, t)!,
+      textFieldIcon: Color.lerp(textFieldIcon, other.textFieldIcon, t)!,
       navActive: Color.lerp(navActive, other.navActive, t)!,
       navInactive: Color.lerp(navInactive, other.navInactive, t)!,
       shadow: Color.lerp(shadow, other.shadow, t)!,

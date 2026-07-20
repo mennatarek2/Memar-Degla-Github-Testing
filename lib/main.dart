@@ -9,20 +9,6 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
 
-  runApp(
-    EasyLocalization(
-      supportedLocales: const [Locale('en'), Locale('ar')],
-      path: 'assets/translation',
-      fallbackLocale: const Locale('en'),
-      saveLocale: true,
-
-      child: DevicePreview(
-        enabled: !kReleaseMode,
-        builder: (context) => const MemarDegla(),
-      ),
-    ),
-  );
-
   // runApp(
   //   EasyLocalization(
   //     supportedLocales: const [Locale('en'), Locale('ar')],
@@ -30,9 +16,23 @@ void main() async {
   //     fallbackLocale: const Locale('en'),
   //     saveLocale: true,
 
-  //     child: const MemarDegla(),
+  //     child: DevicePreview(
+  //       enabled: !kReleaseMode,
+  //       builder: (context) => const MemarDegla(),
+  //     ),
   //   ),
   // );
+
+  runApp(
+    EasyLocalization(
+      supportedLocales: const [Locale('en'), Locale('ar')],
+      path: 'assets/translation',
+      fallbackLocale: const Locale('en'),
+      saveLocale: true,
+
+      child: const MemarDegla(),
+    ),
+  );
 }
 
 class MemarDegla extends StatelessWidget {
@@ -41,8 +41,8 @@ class MemarDegla extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      useInheritedMediaQuery: true,
-      builder: DevicePreview.appBuilder,
+      // useInheritedMediaQuery: true,
+      // builder: DevicePreview.appBuilder,
       theme: AppTheme.light,
 
       darkTheme: AppTheme.dark,

@@ -16,7 +16,7 @@ class CustomLoadingAuthButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final colors = context.colors;
     return Container(
-      padding: const EdgeInsets.all(5),
+      // padding: const EdgeInsets.all(1),
       width: double.infinity,
       decoration: ContainersStyle.authButtonStyle.copyWith(
         color: colors.buttonBg,

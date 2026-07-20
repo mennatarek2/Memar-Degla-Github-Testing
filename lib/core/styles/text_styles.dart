@@ -26,6 +26,16 @@ abstract class AppStyles {
     );
   }
 
+  static TextStyle styleBold18(BuildContext context) {
+    final colors = _colors(context);
+    return TextStyle(
+      color: colors.textPrimary,
+      fontSize: getResponsiveFontSize(context, fontSize: 18),
+      fontFamily: 'Poppins',
+      fontWeight: FontWeight.w700,
+    );
+  }
+
   static TextStyle styleMedium16(BuildContext context) {
     final colors = _colors(context);
     return TextStyle(
@@ -131,6 +141,16 @@ abstract class AppStyles {
     return TextStyle(
       color: colors.textPrimary,
       fontSize: getResponsiveFontSize(context, fontSize: 30),
+      fontFamily: 'Poppins',
+      fontWeight: FontWeight.w600,
+    );
+  }
+
+  static TextStyle styleSemiBold38(BuildContext context) {
+    final colors = _colors(context);
+    return TextStyle(
+      color: colors.textPrimary,
+      fontSize: getResponsiveFontSize(context, fontSize: 38),
       fontFamily: 'Poppins',
       fontWeight: FontWeight.w600,
     );

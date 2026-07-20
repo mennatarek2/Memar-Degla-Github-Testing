@@ -12,7 +12,7 @@ class SignWithSingleOtp extends StatelessWidget {
       onPressed: onPressed,
       child: Text(
         "auth.signInWithSingleOtp".tr(),
-        style: AppStyles.styleMedium16(
+        style: AppStyles.styleMedium18(
           context,
         ).copyWith(color: context.colors.textSecondary),
       ),

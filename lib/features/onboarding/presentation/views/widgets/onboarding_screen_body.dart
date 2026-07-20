@@ -1,9 +1,11 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:memar_degla/constants/assets.dart';
+import 'package:memar_degla/core/constants/assets.dart';
 import 'package:memar_degla/core/routes/app_routes.dart';
+import 'package:memar_degla/core/styles/text_styles.dart';
 import 'package:memar_degla/core/themes/app_colors.dart';
+import 'package:memar_degla/core/themes/theme_extention.dart';
 import 'package:memar_degla/features/onboarding/data/models/onboarding_model.dart';
 import 'onboarding_page_item.dart';
 import 'page_indicator.dart';
@@ -55,7 +57,9 @@ class _OnboardingScreenBodyState extends State<OnboardingScreenBody> {
                     onTap: _goToLogin,
                     child: Text(
                       'onboarding.skip'.tr(),
-                      style: TextStyle(color: colors.onPrimaryGold),
+                      style: AppStyles.styleBold18(
+                        context,
+                      ).copyWith(color: context.colors.primaryGold),
                     ),
                   ),
                   const Spacer(),

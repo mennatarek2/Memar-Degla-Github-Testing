@@ -21,7 +21,7 @@ class PageIndicator extends StatelessWidget {
             width: 36,
             height: 8,
             decoration: BoxDecoration(
-              color: colors.onPrimaryGold,
+              color: colors.primaryGold,
               borderRadius: BorderRadius.circular(8),
             ),
           );
