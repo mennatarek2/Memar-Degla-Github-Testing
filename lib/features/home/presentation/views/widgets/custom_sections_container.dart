@@ -80,7 +80,7 @@ class ContractDisplaySection extends StatelessWidget {
       padding: const EdgeInsets.all(AppPaddings.containerPadding),
       decoration: ContainersStyle.contractsAndUnitsContainer(context).copyWith(
         // color: context.colors.containerBackground
-        color: const Color(0xFFFFF9ED),
+        color: context.colors.customizedContainerBg,
       ),
 
       child: Row(

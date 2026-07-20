@@ -18,11 +18,20 @@ class QuickActionsItems extends StatelessWidget {
       child: Column(
         children: [
           CircleAvatar(
-            backgroundColor: colors.iconBackGround,
+            backgroundColor: colors.containerBackground,
             radius: 30,
-            child: CircleAvatar(
-              backgroundColor: model.imageColor.withValues(alpha: 0.3),
-              radius: 25,
+            child: Container(
+              margin: const EdgeInsets.all(4),
+              decoration: ShapeDecoration(
+                color: model.imageColor.withValues(alpha: 0.3),
+                shape: CircleBorder(
+                  side: BorderSide(
+                    width: 1.5,
+                    color: model.imageColor.withValues(alpha: 0.7),
+                  ),
+                ),
+              ),
+
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: FittedBox(

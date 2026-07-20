@@ -7,27 +7,30 @@ import 'package:memar_degla/features/points/data/models/offers_model.dart';
 import 'package:memar_degla/features/points/presentation/views/widgets/offers_card.dart';
 
 class OffersCardsPageView extends StatefulWidget {
-  const OffersCardsPageView({super.key});
+  const OffersCardsPageView({super.key, this.onTap});
+  final VoidCallback? onTap;
 
   @override
   State<OffersCardsPageView> createState() => _OffersCardsPageViewState();
 }
 
 class _OffersCardsPageViewState extends State<OffersCardsPageView> {
-  // Multiplying the real item count creates an always-forward loop instead
-  // of snapping backward from the last card to the first.
-  static const int _loopMultiplier = 1000;
+  // Large enough that scroll offset never realistically reaches the end —
+  // avoids ever needing a jumpTo(0) seam.
+  static const int _loopMultiplier = 5000;
 
-  // How long a card sits fully visible before the next slide starts.
-  static const Duration _readDuration = Duration(seconds: 4);
+  // Width of each card. Needs to be explicit (not Expanded/Flexible) since
+  // this is a horizontal ListView, not a Row/Column.
+  static const double _cardWidth = 300;
+  static const double _cardGap = 30;
 
-  // How long the slide itself takes. This is the "disappearing" speed —
-  // longer duration = the outgoing card lingers and fades out of view slower.
-  static const Duration _transitionDuration = Duration(milliseconds: 1500);
+  // Pixels advanced per tick — this is the crawl speed. Tune this, not a
+  // duration, since there's no discrete "transition" anymore.
+  static const double _pixelsPerTick = 0.6;
+  static const Duration _tickInterval = Duration(milliseconds: 10); // ~60fps
 
-  late final PageController _pageController;
+  late final ScrollController _scrollController;
   Timer? _autoScrollTimer;
-  int _currentPage = 0;
   bool _userInteracting = false;
 
   int get _realCount => offers.length;
@@ -35,27 +38,30 @@ class _OffersCardsPageViewState extends State<OffersCardsPageView> {
   @override
   void initState() {
     super.initState();
-    _currentPage = (_loopMultiplier ~/ 2) * _realCount;
-    _pageController = PageController(initialPage: _currentPage);
-    _startAutoScroll();
+    _scrollController = ScrollController();
+    WidgetsBinding.instance.addPostFrameCallback((_) => _startAutoScroll());
   }
 
   void _startAutoScroll() {
-    _autoScrollTimer = Timer.periodic(_readDuration, (_) {
-      if (!_pageController.hasClients || _userInteracting) return;
-      _currentPage++;
-      _pageController.animateToPage(
-        _currentPage,
-        duration: _transitionDuration,
-        curve: Curves.easeInOutSine,
-      );
+    _autoScrollTimer = Timer.periodic(_tickInterval, (_) {
+      if (!_scrollController.hasClients || _userInteracting) return;
+
+      final position = _scrollController.position;
+      if (!position.hasContentDimensions) return;
+
+      final next = position.pixels + _pixelsPerTick;
+      // Guard against the (extremely unlikely) case of reaching the end —
+      // still cheaper than crashing if someone shrinks _loopMultiplier later.
+      if (next < position.maxScrollExtent) {
+        _scrollController.jumpTo(next);
+      }
     });
   }
 
   @override
   void dispose() {
     _autoScrollTimer?.cancel();
-    _pageController.dispose();
+    _scrollController.dispose();
     super.dispose();
   }
 
@@ -76,21 +82,31 @@ class _OffersCardsPageViewState extends State<OffersCardsPageView> {
         }
         return false;
       },
-      child: PageView.builder(
-        controller: _pageController,
+      child: ListView.builder(
+        controller: _scrollController,
+        scrollDirection: Axis.horizontal,
+        physics: const BouncingScrollPhysics(),
         itemCount: _realCount * _loopMultiplier,
-        onPageChanged: (index) => _currentPage = index,
         itemBuilder: (context, index) {
           final realIndex = index % _realCount;
           final offerdetails = offers[realIndex];
-          return OffersCard(
-            gradient: gradients[realIndex % gradients.length],
-            icon: Icons.payments_outlined,
-            offersBenfits: offerdetails.offersBenfits,
-            offerType: offerdetails.offerType,
-            title: offerdetails.title,
-            subtitle: offerdetails.discription,
-            endDate: offerdetails.endDate,
+          return Padding(
+            padding: EdgeInsets.only(right: _cardGap, left: index == 0 ? 0 : 0),
+            child: SizedBox(
+              width: _cardWidth,
+              child: GestureDetector(
+                onTap: widget.onTap,
+                child: OffersCard(
+                  gradient: gradients[realIndex % gradients.length],
+                  icon: Icons.payments_outlined,
+                  offersBenfits: offerdetails.offersBenfits,
+                  offerType: offerdetails.offerType,
+                  title: offerdetails.title,
+                  subtitle: offerdetails.discription,
+                  endDate: offerdetails.endDate,
+                ),
+              ),
+            ),
           );
         },
       ),

@@ -36,6 +36,7 @@ class AppColors extends ThemeExtension<AppColors> {
     required this.iconBackGround,
     required this.buttonBg,
     required this.textFieldBorder,
+    required this.customizedContainerBg,
   });
 
   // Base surfaces
@@ -63,6 +64,7 @@ class AppColors extends ThemeExtension<AppColors> {
   final Color info; // "Handover" unit badge
   final Color warning; // "Under Construction" badge
   final Color error; // Logout button, "Expired" points
+  final Color customizedContainerBg;
 
   // Offer / campaign card backgrounds
   final Color offerNavy; // "Early Payment Bonus" card
@@ -89,6 +91,7 @@ class AppColors extends ThemeExtension<AppColors> {
   final Color textFieldBorder;
 
   static const light = AppColors(
+    customizedContainerBg: Color(0xFFFFF9ED),
     icon: Color(0xFF1B2A4A),
     scaffoldBackground: Color(0xFFF0F3F7),
     surface: Color(0xFFFFFFFF),
@@ -110,7 +113,7 @@ class AppColors extends ThemeExtension<AppColors> {
     error: Color(0xFFE74C3C),
     offerNavy: Color(0xFF16233F),
     offerOrange: Color(0xFFE8871E),
-    offerGreen: Color(0xFF16A374),
+    offerGreen: Color.fromARGB(255, 13, 129, 90),
     iconBlueBg: Color(0xFFDCE9F7),
     iconGreenBg: Color(0xFFDCF5E7),
     iconGoldBg: Color(0xFFF5E9D0),
@@ -125,12 +128,13 @@ class AppColors extends ThemeExtension<AppColors> {
   );
 
   static const dark = AppColors(
+    customizedContainerBg: Color(0xFF3E3E35),
     navBarBackground: Color(0xFF171A23),
     scaffoldBackground: Color(0xFF0B0B0F),
     surface: Color(0xFF171A23),
     textFieldBorder: Color(0xFF262D37),
     surfaceVariant: Color(0xFF1A2540),
-    primaryGold: Color(0xFF1B2A4A),
+    primaryGold: Color(0XFFBFA664),
     onPrimaryGold: Color(0xFFC9A227),
     navy: Color(0xFF16233F),
     onNavy: Color(0xFF1B2A4A),
@@ -144,8 +148,8 @@ class AppColors extends ThemeExtension<AppColors> {
     warning: Color(0xFF9CA3AF),
     error: Color(0xFFEF4444),
     offerNavy: Color(0xFF171D24),
-    offerOrange: Color(0xFFD9822B),
-    offerGreen: Color(0xFF16A374),
+    offerOrange: Color(0xFFE8871E),
+    offerGreen: Color.fromARGB(255, 13, 129, 90),
     iconBlueBg: Color(0xFF1B2B45),
     iconGreenBg: Color(0xFF163A2A),
     iconGoldBg: Color(0xFF3A2E14),
@@ -162,6 +166,7 @@ class AppColors extends ThemeExtension<AppColors> {
 
   @override
   AppColors copyWith({
+    Color? customizedContainerBg,
     Color? scaffoldBackground,
     Color? surface,
     Color? surfaceVariant,
@@ -230,6 +235,8 @@ class AppColors extends ThemeExtension<AppColors> {
       icon: icon ?? this.icon,
       iconBackGround: iconBackGround ?? this.iconBackGround,
       buttonBg: buttonBg ?? this.buttonBg,
+      customizedContainerBg:
+          customizedContainerBg ?? this.customizedContainerBg,
     );
   }
 
@@ -282,6 +289,11 @@ class AppColors extends ThemeExtension<AppColors> {
       icon: Color.lerp(icon, other.icon, t)!,
       iconBackGround: Color.lerp(iconBackGround, other.iconBackGround, t)!,
       buttonBg: Color.lerp(buttonBg, other.buttonBg, t)!,
+      customizedContainerBg: Color.lerp(
+        containerBackground,
+        other.customizedContainerBg,
+        t,
+      )!,
     );
   }
 }
