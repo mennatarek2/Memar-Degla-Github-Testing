@@ -42,7 +42,7 @@ class ProfileScreenBody extends StatelessWidget {
                     titleKey: 'profile.settings',
                     iconPath: Assets.assetsIconsSettingsIcon,
                     onTap: () {
-                      // TODO: Navigate to settings screen
+                      router.push(AppRoutes.settings);
                     },
                   ),
                   Divider(thickness: 1, color: context.colors.iconBackGround),

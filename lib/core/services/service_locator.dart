@@ -10,6 +10,19 @@ import 'package:memar_degla/features/profile/domain/useCases/clear_saved_picture
 import 'package:memar_degla/features/profile/domain/useCases/get_saved_profile_picture_use_case.dart';
 import 'package:memar_degla/features/profile/domain/useCases/save_profile_picture_use_case.dart';
 import 'package:memar_degla/features/profile/presentation/manger/cubit/profile_picture_cubit.dart';
+import 'package:memar_degla/features/settings/data/datasources/settings_local_data_source.dart';
+import 'package:memar_degla/features/settings/data/repositories/settings_repository_impl.dart';
+import 'package:memar_degla/features/settings/data/services/notification_permission_service_impl.dart';
+import 'package:memar_degla/features/settings/domain/repositories/notification_permission_service.dart';
+import 'package:memar_degla/features/settings/domain/repositories/settings_repository.dart';
+
+import 'package:memar_degla/features/settings/domain/usecases/get_notification_preferences.dart';
+import 'package:memar_degla/features/settings/domain/usecases/get_theme_mode.dart';
+import 'package:memar_degla/features/settings/domain/usecases/select_theme_mode.dart';
+import 'package:memar_degla/features/settings/domain/usecases/set_notification_channel_enabled.dart';
+import 'package:memar_degla/features/settings/presentation/manger/cubit/theme_cubit.dart';
+
+import 'package:memar_degla/features/settings/presentation/manger/notifications/notifications_cubit.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// Global service locator instance. Import this `sl` wherever a
@@ -22,6 +35,7 @@ Future<void> initServiceLocator() async {
   _registerCoreServices();
   _registerProfilePictureFeature();
   _regiterUserProfileFeature();
+  _registerSettingsFeature();
 }
 
 /// Third-party dependencies that need async setup or are shared across
@@ -82,6 +96,54 @@ void _registerProfilePictureFeature() {
       saveProfilePicture: sl<SaveProfilePictureUseCase>(),
       getSavedProfilePicture: sl<GetSavedProfilePictureUseCase>(),
       clearProfilePicture: sl<ClearProfilePictureUseCase>(),
+    ),
+  );
+}
+
+void _registerSettingsFeature() {
+  // Data layer
+  sl.registerLazySingleton<SettingsLocalDataSource>(
+    () => SettingsLocalDataSource(sl<SharedPreferences>()),
+  );
+  sl.registerLazySingleton<NotificationPermissionService>(
+    () => const NotificationPermissionServiceImpl(),
+  );
+  sl.registerLazySingleton<SettingsRepository>(
+    () => SettingsRepositoryImpl(sl<SettingsLocalDataSource>()),
+  );
+
+  // Domain layer
+
+  sl.registerLazySingleton<GetThemeMode>(
+    () => GetThemeMode(sl<SettingsRepository>()),
+  );
+  sl.registerLazySingleton<SelectThemeMode>(
+    () => SelectThemeMode(sl<SettingsRepository>()),
+  );
+  sl.registerLazySingleton<GetNotificationPreferences>(
+    () => GetNotificationPreferences(sl<SettingsRepository>()),
+  );
+  sl.registerLazySingleton<SetNotificationChannelEnabled>(
+    () => SetNotificationChannelEnabled(
+      sl<SettingsRepository>(),
+      sl<NotificationPermissionService>(),
+    ),
+  );
+
+  // Presentation layer — registered as lazy singletons, not factories,
+  // unlike ProfilePictureCubit above. ThemeCubit and LocaleCubit back
+  // MaterialApp's themeMode/locale at the app root, so they need to
+  // outlive the settings screen; NotificationsCubit is kept alongside
+  // them for consistency and so its state survives revisits to the
+  // settings screen without a reload.
+
+  sl.registerLazySingleton<ThemeCubit>(
+    () => ThemeCubit(sl<GetThemeMode>(), sl<SelectThemeMode>()),
+  );
+  sl.registerLazySingleton<NotificationsCubit>(
+    () => NotificationsCubit(
+      sl<GetNotificationPreferences>(),
+      sl<SetNotificationChannelEnabled>(),
     ),
   );
 }

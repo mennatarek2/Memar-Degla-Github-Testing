@@ -2,7 +2,6 @@ import 'package:bloc/bloc.dart';
 import 'package:memar_degla/features/profile/domain/entities/user_entity.dart';
 import 'package:memar_degla/features/profile/domain/repo/user_repo.dart';
 import 'package:memar_degla/features/profile/presentation/manger/cubit/user_profile_state.dart';
-import 'package:meta/meta.dart';
 
 class UserProfileCubit extends Cubit<UserProfileState> {
   final UserRepo repository;
