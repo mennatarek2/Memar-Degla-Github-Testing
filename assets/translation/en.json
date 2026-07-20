@@ -27,7 +27,11 @@
   "home": {
     "loyality_points": "Loyality Points",
     "membership_degree": "Gold",
-    "on_hold_points": "Pending"
+    "on_hold_points": "Pending",
+    "active_offers": "Active Offers",
+    "view_all": "View All",
+    "payment_due": "Payment Due",
+    "welcome_ahmed": "Welcome Ahmed"
   },
   "profile": {
     "settings": "Settings",
@@ -44,22 +48,139 @@
     "units": "Units",
     "profile": "Profile"
   },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "english": "English",
+    "arabic": "العربية",
+    "appearance": "Appearance",
+    "light_mode": "Light Mode",
+    "switch_to_light_theme": "Switch to light theme",
+    "dark_mode": "Dark Mode",
+    "switch_to_dark_theme": "Switch to dark theme",
+    "notifications": "Notifications",
+    "push_notifications": "Push Notifications",
+    "receive_push_notifications": "Receive push notifications",
+    "email_notifications": "Email Notifications",
+    "receive_email_notifications": "Receive email notifications",
+    "notification_permission_denied": "Notification permission was denied. Enable it from your device settings to turn this on."
+  },
+  "installments": {
+    "all": "All",
+    "due": "Due",
+    "paid": "Paid",
+    "overdue": "Overdue",
+    "upcoming": "Upcoming"
+  },
+  "support": {
+    "contact_form": "Contact Form",
+    "enter_your_name": "Enter your name",
+    "email": "Email",
+    "how_can_we_help": "How can we help?",
+    "send_message": "Send Message",
+    "email_support": "Email Support",
+    "support_email": "Support@memaardegla.com",
+    "whatsapp": "WhatsApp",
+    "quick_responses": "Quick Responses",
+    "call_us": "Call Us",
+    "available_24_7": "Available 24/7",
+    "faq_title": "Frequently Asked Questions"
+  },
+  "units": {
+    "details": "Details",
+    "floor_plan": "Floor Plan",
+    "payment_summary": "Payment Summary",
+    "total_price": "Total Price",
+    "paid_60": "Paid (60%)",
+    "remaining_40": "Remaining (40%)",
+    "bedrooms": "Bedrooms",
+    "bathrooms": "Bathrooms",
+    "area": "Area",
+    "floor": "Floor",
+    "building": "Building",
+    "construction_date": "Construction Date",
+    "apartment": "Apartment"
+  },
+  "contracts": {
+    "documents": "Documents",
+    "my_contracts": "My Contracts",
+    "contract_details": "Contract Details",
+    "current_installments": "Current Installments",
+    "exclusive_offers": "Exclusive Offers",
+    "redeem_your_points": "Redeem Your Points",
+    "profile": "Profile"
+  },
+  "points": {
+    "redeem": "Redeem",
+    "available_balance": "Available Balance",
+    "points_balance": "Points",
+    "points_redeemed_successfully": "Points Redeemed Successfully",
+    "early_payment_bonus": "Early Payment Bonus",
+    "early_payment_bonus_desc": "Pay your installments early and earn 2x loyalty points on every payment",
+    "referral_double_points": "Referral Double Points",
+    "referral_double_points_desc": "Refer a friend and both of you earn double points when they make their first purchase",
+    "ramadan_special_offer": "Ramadan Special Offer",
+    "ends_feb_28": "Ends Feb 28",
+    "payment": "payment",
+    "referral": "Referral",
+    "campaign": "Campaign",
+    "limited_time_offer": "Limited-time offer",
+    "installment_discount": "Installment Discount",
+    "installment_discount_desc": "Redeem your points to get a discount on your next installment payment.",
+    "new_unit_discount": "New Unit Discount",
+    "new_unit_discount_desc": "Receive a special discount when booking a new residential unit.",
+    "property_upgrade": "Property Upgrade",
+    "property_upgrade_desc": "Use your points toward upgrading your selected unit or finishing package.",
+    "interior_design_consultation": "Interior Design Consultation",
+    "interior_design_consultation_desc": "Redeem a free consultation session with our interior design team.",
+    "maintenance_services": "Maintenance Services",
+    "maintenance_services_desc": "Exchange your points for home maintenance and repair services.",
+    "parking_space_discount": "Parking Space Discount",
+    "parking_space_discount_desc": "Get a discount on purchasing or reserving an additional parking space."
+  },
+  "common": {
+    "retry": "Retry",
+    "cancel": "Cancel",
+    "ok": "OK",
+    "confirm": "Confirm",
+    "choose_from_gallery": "Choose from gallery",
+    "take_photo": "Take a photo"
+  },
+  "errors": {
+    "no_internet_connection": "No internet connection",
+    "check_connection": "Check your connection and try again.",
+    "taking_longer_than_usual": "Taking longer than usual",
+    "request_timed_out": "The request timed out. Please try again.",
+    "something_went_wrong": "Something went wrong on our end",
+    "working_on_it": "We're working on it — please try again shortly.",
+    "session_expired": "Session expired",
+    "please_login_again": "Please log in again to continue.",
+    "no_access": "You don't have access",
+    "no_permission": "You don't have permission to do this.",
+    "not_found": "Not found",
+    "could_not_find": "This couldn't be found. It may have been removed.",
+    "unable_to_continue": "Unable to continue",
+    "check_input": "Check your input",
+    "some_fields_need_attention": "Some fields need your attention.",
+    "slow_down": "Slow down a little",
+    "too_many_attempts": "Too many attempts — please wait a moment and try again.",
+    "could_not_load_saved_data": "Couldn't load saved data",
+    "unexpected_error": "Unexpected error",
+    "something_went_wrong_short": "Something went wrong",
+    "try_again_later": "Please try again in a moment."
+  },
+  "settings_profile": {
+    "logout": "Log out",
+    "logout_confirmation": "Are you sure you want to log out?"
+  },
   "onboarding": {
     "skip": "Skip",
     "next": "Next",
-    "pages": [
-      {
-        "title": "Welcome to Memar Degla",
-        "subtitle": "Explore your account, offers and manage contracts easily."
-      },
-      {
-        "title": "Track Your Installments",
-        "subtitle": "Stay up to date with your payments and schedules."
-      },
-      {
-        "title": "Exclusive Offers",
-        "subtitle": "Receive tailored offers and loyalty rewards."
-      }
-    ]
+    "title1": "Welcome to Memar Degla",
+    "subtitle1": "Explore your account, offers and manage contracts easily.",
+    "title2": "Track Your Installments",
+    "subtitle2": "Stay up to date with your payments and schedules.",
+    "title3": "Exclusive Offers",
+    "subtitle3": "Receive tailored offers and loyalty rewards."
   }
 }

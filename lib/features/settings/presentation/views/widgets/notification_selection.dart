@@ -1,4 +1,5 @@
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:memar_degla/core/themes/theme_extention.dart';
@@ -17,11 +18,11 @@ class NotificationsSection extends StatelessWidget {
     return BlocBuilder<NotificationsCubit, SettingsNotificationsState>(
       builder: (context, state) {
         return SettingsSectionCard(
-          title: 'Notifications',
+          title: 'settings.notifications'.tr(),
           children: [
             RadioSettingTile(
-              title: 'Push Notifications',
-              subtitle: 'Receive push notifications',
+              title: 'settings.push_notifications'.tr(),
+              subtitle: 'settings.receive_push_notifications'.tr(),
               trailingIcon: Icons.notifications_rounded,
               selected: state.pushEnabled,
               backgroundColor: colors.navy,
@@ -30,8 +31,8 @@ class NotificationsSection extends StatelessWidget {
               onTap: () => context.read<NotificationsCubit>().togglePush(),
             ),
             RadioSettingTile(
-              title: 'Email Notifications',
-              subtitle: 'Receive email notifications',
+              title: 'settings.email_notifications'.tr(),
+              subtitle: 'settings.receive_email_notifications'.tr(),
               trailingIcon: Icons.mail_rounded,
               selected: state.emailEnabled,
               backgroundColor: colors.navy,

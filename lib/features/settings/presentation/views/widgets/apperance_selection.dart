@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:memar_degla/core/themes/theme_extention.dart';
@@ -17,11 +18,11 @@ class AppearanceSection extends StatelessWidget {
     return BlocBuilder<ThemeCubit, SettingsThemeState>(
       builder: (context, state) {
         return SettingsSectionCard(
-          title: 'Appearance',
+          title: 'settings.appearance'.tr(),
           children: [
             RadioSettingTile(
-              title: 'Light Mode',
-              subtitle: 'Switch to light theme',
+              title: 'settings.light_mode'.tr(),
+              subtitle: 'settings.switch_to_light_theme'.tr(),
               trailingIcon: Icons.wb_sunny_rounded,
               selected: state.mode == AppThemeMode.light,
               backgroundColor: colors.surface,
@@ -32,8 +33,8 @@ class AppearanceSection extends StatelessWidget {
                   context.read<ThemeCubit>().selectMode(AppThemeMode.light),
             ),
             RadioSettingTile(
-              title: 'Dark Mode',
-              subtitle: 'Switch to dark theme',
+              title: 'settings.dark_mode'.tr(),
+              subtitle: 'settings.switch_to_dark_theme'.tr(),
               trailingIcon: Icons.nightlight_round,
               selected: state.mode == AppThemeMode.dark,
               backgroundColor: colors.surface,

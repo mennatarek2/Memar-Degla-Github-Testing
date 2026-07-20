@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import '../error/failures.dart';
 
@@ -28,81 +29,81 @@ class FailureUiModel {
 extension FailureUiMapper on Failure {
   FailureUiModel toUiModel() {
     return switch (this) {
-      NetworkFailure() => const FailureUiModel(
-          icon: Icons.wifi_off_rounded,
-          title: 'No internet connection',
-          message: 'Check your connection and try again.',
-          canRetry: true,
-        ),
-      TimeoutFailure() => const FailureUiModel(
-          icon: Icons.hourglass_bottom_rounded,
-          title: 'Taking longer than usual',
-          message: 'The request timed out. Please try again.',
-          canRetry: true,
-        ),
+      NetworkFailure() => FailureUiModel(
+        icon: Icons.wifi_off_rounded,
+        title: 'errors.no_internet_connection'.tr(),
+        message: 'errors.check_connection'.tr(),
+        canRetry: true,
+      ),
+      TimeoutFailure() => FailureUiModel(
+        icon: Icons.hourglass_bottom_rounded,
+        title: 'errors.taking_longer_than_usual'.tr(),
+        message: 'errors.request_timed_out'.tr(),
+        canRetry: true,
+      ),
       ServerFailure() => FailureUiModel(
-          icon: Icons.dns_rounded,
-          title: 'Something went wrong on our end',
-          message: message ?? "We're working on it — please try again shortly.",
-          canRetry: true,
-        ),
-      UnauthorizedFailure() => const FailureUiModel(
-          icon: Icons.lock_outline_rounded,
-          title: 'Session expired',
-          message: 'Please log in again to continue.',
-          // Handled as a side effect (force logout) by the caller —
-          // this copy only matters if it's ever shown as a fallback.
-          canRetry: false,
-        ),
-      ForbiddenFailure() => const FailureUiModel(
-          icon: Icons.block_rounded,
-          title: "You don't have access",
-          message: "You don't have permission to do this.",
-          canRetry: false,
-        ),
-      NotFoundFailure() => const FailureUiModel(
-          icon: Icons.search_off_rounded,
-          title: 'Not found',
-          message: "This couldn't be found. It may have been removed.",
-          canRetry: false,
-        ),
+        icon: Icons.dns_rounded,
+        title: 'errors.something_went_wrong'.tr(),
+        message: message ?? 'errors.working_on_it'.tr(),
+        canRetry: true,
+      ),
+      UnauthorizedFailure() => FailureUiModel(
+        icon: Icons.lock_outline_rounded,
+        title: 'errors.session_expired'.tr(),
+        message: 'errors.please_login_again'.tr(),
+        // Handled as a side effect (force logout) by the caller —
+        // this copy only matters if it's ever shown as a fallback.
+        canRetry: false,
+      ),
+      ForbiddenFailure() => FailureUiModel(
+        icon: Icons.block_rounded,
+        title: 'errors.no_access'.tr(),
+        message: 'errors.no_permission'.tr(),
+        canRetry: false,
+      ),
+      NotFoundFailure() => FailureUiModel(
+        icon: Icons.search_off_rounded,
+        title: 'errors.not_found'.tr(),
+        message: 'errors.could_not_find'.tr(),
+        canRetry: false,
+      ),
       ConflictFailure(:final message) => FailureUiModel(
-          icon: Icons.error_outline_rounded,
-          title: 'Unable to continue',
-          // e.g. "Sorry, this email is already used." — from the backend.
-          message: message ?? 'This action conflicts with existing data.',
-          canRetry: false,
-        ),
+        icon: Icons.error_outline_rounded,
+        title: 'errors.unable_to_continue'.tr(),
+        // e.g. "Sorry, this email is already used." — from the backend.
+        message: message ?? 'errors.unable_to_continue'.tr(),
+        canRetry: false,
+      ),
       ValidationFailure(:final message) => FailureUiModel(
-          icon: Icons.warning_amber_rounded,
-          title: 'Check your input',
-          message: message ?? 'Some fields need your attention.',
-          canRetry: false,
-        ),
-      RateLimitFailure() => const FailureUiModel(
-          icon: Icons.timer_outlined,
-          title: 'Slow down a little',
-          message: 'Too many attempts — please wait a moment and try again.',
-          canRetry: false,
-        ),
-      CacheFailure() => const FailureUiModel(
-          icon: Icons.storage_rounded,
-          title: "Couldn't load saved data",
-          message: 'Please try again.',
-          canRetry: true,
-        ),
-      ParsingFailure() => const FailureUiModel(
-          icon: Icons.error_outline_rounded,
-          title: 'Something went wrong',
-          message: 'Please try again in a moment.',
-          canRetry: true,
-        ),
-      UnexpectedFailure() => const FailureUiModel(
-          icon: Icons.error_outline_rounded,
-          title: 'Unexpected error',
-          message: 'Something went wrong. Please try again.',
-          canRetry: true,
-        ),
+        icon: Icons.warning_amber_rounded,
+        title: 'errors.check_input'.tr(),
+        message: message ?? 'errors.some_fields_need_attention'.tr(),
+        canRetry: false,
+      ),
+      RateLimitFailure() => FailureUiModel(
+        icon: Icons.timer_outlined,
+        title: 'errors.slow_down'.tr(),
+        message: 'errors.too_many_attempts'.tr(),
+        canRetry: false,
+      ),
+      CacheFailure() => FailureUiModel(
+        icon: Icons.storage_rounded,
+        title: 'errors.could_not_load_saved_data'.tr(),
+        message: 'common.retry'.tr(),
+        canRetry: true,
+      ),
+      ParsingFailure() => FailureUiModel(
+        icon: Icons.error_outline_rounded,
+        title: 'errors.something_went_wrong_short'.tr(),
+        message: 'errors.try_again_later'.tr(),
+        canRetry: true,
+      ),
+      UnexpectedFailure() => FailureUiModel(
+        icon: Icons.error_outline_rounded,
+        title: 'errors.unexpected_error'.tr(),
+        message: 'errors.something_went_wrong_short'.tr(),
+        canRetry: true,
+      ),
     };
   }
 }

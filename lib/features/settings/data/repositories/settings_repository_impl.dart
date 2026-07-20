@@ -1,5 +1,4 @@
 import 'package:memar_degla/features/settings/data/datasources/settings_local_data_source.dart';
-import 'package:memar_degla/features/settings/domain/entities/app_language.dart';
 import 'package:memar_degla/features/settings/domain/entities/app_theme_mode.dart';
 import 'package:memar_degla/features/settings/domain/repositories/settings_repository.dart';
 

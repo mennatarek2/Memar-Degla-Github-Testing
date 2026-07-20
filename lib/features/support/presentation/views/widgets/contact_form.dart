@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:memar_degla/core/styles/containers_style.dart';
 import 'package:memar_degla/core/styles/text_styles.dart';
@@ -16,15 +17,18 @@ class ContactForm extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Contact Form", style: AppStyles.styleSemiBold24(context)),
+          Text(
+            'support.contact_form'.tr(),
+            style: AppStyles.styleSemiBold24(context),
+          ),
           const SizedBox(height: 20),
-          const CustomizedTextField(label: "Enter your name"),
+          CustomizedTextField(label: 'support.enter_your_name'.tr()),
           const SizedBox(height: 10),
-          const EmailTextField(label: "Email"),
+          EmailTextField(label: 'support.email'.tr()),
           const SizedBox(height: 20),
-          const CustomizedTextField(label: "How can we help?"),
+          CustomizedTextField(label: 'support.how_can_we_help'.tr()),
           const SizedBox(height: 20),
-          const CustomLoadingAuthButton(title: "Send Message"),
+          CustomLoadingAuthButton(title: 'support.send_message'.tr()),
         ],
       ),
     );

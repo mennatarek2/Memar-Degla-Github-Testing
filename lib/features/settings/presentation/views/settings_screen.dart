@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:memar_degla/core/widgets/custom_app_bar.dart';
@@ -11,9 +12,9 @@ class SettingsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: CustomAppBar(title: "Settings"),
-      body: SettingsBlocManger(),
+    return Scaffold(
+      appBar: CustomAppBar(title: 'settings.title'.tr()),
+      body: const SettingsBlocManger(),
     );
   }
 }
@@ -29,11 +30,8 @@ class SettingsBlocManger extends StatelessWidget {
         final channel = state.permissionDeniedFor;
         if (channel == NotificationChannel.push) {
           ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(
-              content: Text(
-                'Notification permission was denied. '
-                'Enable it from your device settings to turn this on.',
-              ),
+            SnackBar(
+              content: Text('settings.notification_permission_denied'.tr()),
             ),
           );
         }

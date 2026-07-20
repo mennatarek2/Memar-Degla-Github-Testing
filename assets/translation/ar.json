@@ -27,7 +27,11 @@
   "home": {
     "loyality_points": "نقاط الولاء",
     "membership_degree": "ذهبي",
-    "on_hold_points": "نقاظ معلقة"
+    "on_hold_points": "نقاظ معلقة",
+    "active_offers": "العروض النشطة",
+    "view_all": "عرض الكل",
+    "payment_due": "استحقاق الدفع",
+    "welcome_ahmed": "مرحبًا أحمد"
   },
   "profile": {
     "settings": "الإعدادات",
@@ -44,22 +48,139 @@
     "units": "الوحدات",
     "profile": "الملف الشخصي"
   },
+  "settings": {
+    "title": "الإعدادات",
+    "language": "اللغة",
+    "english": "English",
+    "arabic": "العربية",
+    "appearance": "المظهر",
+    "light_mode": "الوضع الفاتح",
+    "switch_to_light_theme": "التبديل إلى السمة الفاتحة",
+    "dark_mode": "الوضع الداكن",
+    "switch_to_dark_theme": "التبديل إلى السمة الداكنة",
+    "notifications": "الإشعارات",
+    "push_notifications": "إشعارات الدفع",
+    "receive_push_notifications": "استلام إشعارات الدفع",
+    "email_notifications": "إشعارات البريد الإلكتروني",
+    "receive_email_notifications": "استلام إشعارات البريد الإلكتروني",
+    "notification_permission_denied": "تم رفض إذن الإشعارات. قم بتفعيله من إعدادات جهازك لتشغيل هذه الميزة."
+  },
+  "installments": {
+    "all": "الكل",
+    "due": "مستحق",
+    "paid": "مدفوع",
+    "overdue": "متأخر",
+    "upcoming": "قادم"
+  },
+  "support": {
+    "contact_form": "نموذج الاتصال",
+    "enter_your_name": "أدخل اسمك",
+    "email": "البريد الإلكتروني",
+    "how_can_we_help": "كيف يمكننا مساعدتك؟",
+    "send_message": "إرسال الرسالة",
+    "email_support": "الدعم عبر البريد الإلكتروني",
+    "support_email": "Support@memaardegla.com",
+    "whatsapp": "واتساب",
+    "quick_responses": "استجابات سريعة",
+    "call_us": "اتصل بنا",
+    "available_24_7": "متاح على مدار 24/7",
+    "faq_title": "الأسئلة الشائعة"
+  },
+  "units": {
+    "details": "التفاصيل",
+    "floor_plan": "خطة الطابق",
+    "payment_summary": "ملخص الدفع",
+    "total_price": "إجمالي السعر",
+    "paid_60": "مدفوع (60%)",
+    "remaining_40": "متبقي (40%)",
+    "bedrooms": "غرف النوم",
+    "bathrooms": "الحمامات",
+    "area": "المساحة",
+    "floor": "الطابق",
+    "building": "المبنى",
+    "construction_date": "تاريخ البناء",
+    "apartment": "شقة"
+  },
+  "contracts": {
+    "documents": "المستندات",
+    "my_contracts": "عقودي",
+    "contract_details": "تفاصيل العقد",
+    "current_installments": "الأقساط الحالية",
+    "exclusive_offers": "عروض حصرية",
+    "redeem_your_points": "استبدال نقاطك",
+    "profile": "الملف الشخصي"
+  },
+  "points": {
+    "redeem": "استبدال",
+    "available_balance": "الرصيد المتوفر",
+    "points_balance": "نقاط",
+    "points_redeemed_successfully": "تم استبدال النقاط بنجاح",
+    "early_payment_bonus": "مكافأة الدفع المبكر",
+    "early_payment_bonus_desc": "ادفع أقساطك مبكرًا واكسب ضعف نقاط الولاء على كل دفعة",
+    "referral_double_points": "نقاط مضاعفة للإحالة",
+    "referral_double_points_desc": "قم بإحالة صديق وكلاكما يكسب نقاطًا مضاعفة عند أول عملية شراء له",
+    "ramadan_special_offer": "عرض رمضان الخاص",
+    "ends_feb_28": "ينتهي في 28 فبراير",
+    "payment": "الدفع",
+    "referral": "الإحالة",
+    "campaign": "الحملة",
+    "limited_time_offer": "عرض لفترة محدودة",
+    "installment_discount": "خصم الأقساط",
+    "installment_discount_desc": "استبدل نقاطك للحصول على خصم على دفعة القسط القادمة.",
+    "new_unit_discount": "خصم للوحدة الجديدة",
+    "new_unit_discount_desc": "احصل على خصم خاص عند حجز وحدة سكنية جديدة.",
+    "property_upgrade": "ترقية العقار",
+    "property_upgrade_desc": "استخدم نقاطك لترقية وحدتك المختارة أو حزمة التشطيب.",
+    "interior_design_consultation": "استشارة التصميم الداخلي",
+    "interior_design_consultation_desc": "استبدل جلسة استشارة مجانية مع فريق التصميم الداخلي لدينا.",
+    "maintenance_services": "خدمات الصيانة",
+    "maintenance_services_desc": "استبدل نقاطك لخدمات صيانة المنزل وإصلاحه.",
+    "parking_space_discount": "خصم مساحة انتظار",
+    "parking_space_discount_desc": "احصل على خصم عند شراء أو حجز مكان انتظار إضافي."
+  },
+  "common": {
+    "retry": "إعادة المحاولة",
+    "cancel": "إلغاء",
+    "ok": "موافق",
+    "confirm": "تأكيد",
+    "choose_from_gallery": "اختر من المعرض",
+    "take_photo": "التقاط صورة"
+  },
+  "errors": {
+    "no_internet_connection": "لا يوجد اتصال بالإنترنت",
+    "check_connection": "تحقق من اتصالك وحاول مرة أخرى.",
+    "taking_longer_than_usual": "يستغرق وقتًا أطول من المعتاد",
+    "request_timed_out": "انتهت مهلة الطلب. يرجى المحاولة مرة أخرى.",
+    "something_went_wrong": "حدث خطأ من جانبنا",
+    "working_on_it": "نحن نعمل على هذا — يرجى المحاولة مرة أخرى قريبًا.",
+    "session_expired": "انتهت الجلسة",
+    "please_login_again": "يرجى تسجيل الدخول مرة أخرى للمتابعة.",
+    "no_access": "ليس لديك صلاحية",
+    "no_permission": "ليس لديك إذن للقيام بهذا.",
+    "not_found": "غير موجود",
+    "could_not_find": "تعذر العثور على هذا. ربما تم حذفه.",
+    "unable_to_continue": "غير قادر على المتابعة",
+    "check_input": "تحقق من مدخلاتك",
+    "some_fields_need_attention": "بعض الحقول تحتاج إلى اهتمامك.",
+    "slow_down": "تأخير قليلًا",
+    "too_many_attempts": "محاولات كثيرة جدًا — يرجى الانتظار لحظة ثم المحاولة مرة أخرى.",
+    "could_not_load_saved_data": "تعذر تحميل البيانات المحفوظة",
+    "unexpected_error": "خطأ غير متوقع",
+    "something_went_wrong_short": "حدث خطأ",
+    "try_again_later": "يرجى المحاولة مرة أخرى بعد لحظة."
+  },
+  "settings_profile": {
+    "logout": "تسجيل الخروج",
+    "logout_confirmation": "هل أنت متأكد أنك تريد تسجيل الخروج؟"
+  },
   "onboarding": {
     "skip": "تخطى",
     "next": "التالي",
-    "pages": [
-      {
-        "title": "مرحبًا بك في معمار دجلة",
-        "subtitle": "استكشف حسابك، العروض وإدارة عقودك بسهولة."
-      },
-      {
-        "title": "تابع أقساطك",
-        "subtitle": "ابقَ مطلعًا على دفعاتك وجداولك."
-      },
-      {
-        "title": "عروض حصرية",
-        "subtitle": "احصل على عروض ومكافآت الولاء المخصصة."
-      }
-    ]
+    "title1": "مرحبًا بك في معمار دجلة",
+    "subtitle1": "استكشف حسابك، العروض وإدارة عقودك بسهولة.",
+    "title2": "تابع أقساطك",
+    "subtitle2": "ابقَ مطلعًا على دفعاتك وجداولك.",
+    "title3": "عروض حصرية",
+    "subtitle3": "احصل على عروض ومكافآت الولاء المخصصة."
   }
 }

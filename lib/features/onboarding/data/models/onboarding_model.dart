@@ -1,3 +1,5 @@
+import 'package:easy_localization/easy_localization.dart';
+
 class OnboardingModel {
   final String title, subTitle;
 
@@ -6,18 +8,16 @@ class OnboardingModel {
 
 final List<OnboardingModel> onBoardingModel = [
   OnboardingModel(
-    title: 'Memar Degla',
-    subTitle:
-        'view all your units, contracts and payments schedules in one place',
+    title: 'onboarding.title1'.tr(),
+    subTitle: 'onboarding.subtitle1'.tr(),
   ),
   OnboardingModel(
-    title: 'Earn Loyalty Points',
-    subTitle: 'Get reward from every payment and friends referral',
+    title: 'onboarding.title2'.tr(),
+    subTitle: 'onboarding.subtitle2'.tr(),
   ),
 
   OnboardingModel(
-    title: 'Redeem Rewards',
-    subTitle:
-        'Use your points for discounts, upgrades, and exceclusive services',
+    title: 'onboarding.title3'.tr(),
+    subTitle: 'onboarding.subtitle3'.tr(),
   ),
 ];

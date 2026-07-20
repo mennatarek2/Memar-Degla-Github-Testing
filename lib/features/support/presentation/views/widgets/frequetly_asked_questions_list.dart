@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:memar_degla/core/constants/app_padddings.dart';
 import 'package:memar_degla/core/styles/containers_style.dart';
@@ -18,7 +19,7 @@ class FrequetlyAskedQuestionsList extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Frequently Asked Questions",
+            'support.faq_title'.tr(),
             style: AppStyles.styleSemiBold24(context),
           ),
           const SizedBox(height: 20),

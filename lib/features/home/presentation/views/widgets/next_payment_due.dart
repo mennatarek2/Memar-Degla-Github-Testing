@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:memar_degla/core/constants/app_padddings.dart';
@@ -16,7 +17,10 @@ class NextPaymentDue extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('Payment Due:', style: AppStyles.styleSemiBold24(context)),
+        Text(
+          '${'home.payment_due'.tr()}:',
+          style: AppStyles.styleSemiBold24(context),
+        ),
         const SizedBox(height: 20),
         Container(
           decoration: ContainersStyle.profileItemContainer(context),

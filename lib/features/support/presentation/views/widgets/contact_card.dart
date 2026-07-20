@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:memar_degla/core/constants/app_padddings.dart';
 import 'package:memar_degla/core/styles/containers_style.dart';
@@ -25,14 +26,14 @@ class ContactCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Email Support",
+                'support.email_support'.tr(),
                 style: AppStyles.styleMedium18(
                   context,
                 ).copyWith(color: colors.textSecondary),
               ),
 
               Text(
-                "Support@memaardegla.com",
+                'support.support_email'.tr(),
                 style: AppStyles.styleSemiBold20(context),
               ),
             ],

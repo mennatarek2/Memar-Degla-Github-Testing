@@ -1,4 +1,3 @@
-import 'package:memar_degla/features/settings/domain/entities/app_language.dart';
 import 'package:memar_degla/features/settings/domain/entities/app_theme_mode.dart';
 
 /// Persists and reads the user's settings choices.

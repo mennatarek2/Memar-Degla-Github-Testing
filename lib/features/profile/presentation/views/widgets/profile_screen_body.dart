@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:memar_degla/core/constants/assets.dart';
@@ -103,13 +104,13 @@ class ProfileScreenBody extends StatelessWidget {
               onPressed: () {
                 RedeemConfirmationDialog.show(
                   context,
-                  title: 'Log Out',
-                  message: 'Are you sure you want to Logout',
+                  title: 'common.confirm'.tr(),
+                  message: 'common.confirm'.tr(),
                   onConfirm: () => GoRouter.of(context).pop(),
                   onCancel: () {},
                 );
               },
-              title: "Log out",
+              title: 'profile.logout'.tr(),
             ),
           ],
         ),

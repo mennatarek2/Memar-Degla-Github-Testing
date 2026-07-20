@@ -14,15 +14,15 @@ class LanguageSection extends StatelessWidget {
     final currentCode = context.locale.languageCode;
 
     return SettingsSectionCard(
-      title: 'Language',
+      title: 'settings.language'.tr(),
       children: [
         LanguageOptionTile(
-          label: 'English',
+          label: 'settings.english'.tr(),
           selected: currentCode == 'en',
           onTap: () => context.setLocale(const Locale('en')),
         ),
         LanguageOptionTile(
-          label: 'العربية',
+          label: 'settings.arabic'.tr(),
           selected: currentCode == 'ar',
           onTap: () => context.setLocale(const Locale('ar')),
         ),

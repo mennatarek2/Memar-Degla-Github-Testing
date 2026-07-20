@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import 'package:memar_degla/core/constants/app_padddings.dart';
@@ -138,7 +139,7 @@ class OffersCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Limited-time offer",
+                      'points.limited_time_offer'.tr(),
                       style: AppStyles.styleSemiBold16(
                         context,
                       ).copyWith(color: Colors.white),
@@ -153,7 +154,7 @@ class OffersCard extends StatelessWidget {
                 ),
                 const Spacer(),
                 Text(
-                  "Details",
+                  'units.details'.tr(),
                   style: AppStyles.styleSemiBold16(
                     context,
                   ).copyWith(color: Colors.white),

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:memar_degla/core/constants/app_padddings.dart';
 import 'package:memar_degla/core/styles/containers_style.dart';
@@ -18,25 +19,28 @@ class PaymentSummary extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Payment Summary", style: AppStyles.styleSemiBold24(context)),
+          Text(
+            'units.payment_summary'.tr(),
+            style: AppStyles.styleSemiBold24(context),
+          ),
           const SizedBox(height: 20),
           PaymentSummaryDetails(
             textColor: textColor.textMuted,
             unitTotalPrice: unitTotalPrice,
-            title: "Total Price",
+            title: 'units.total_price'.tr(),
           ),
           const SizedBox(height: 10),
           PaymentSummaryDetails(
             textColor: textColor.offerGreen,
             unitTotalPrice: unitTotalPrice,
-            title: "Paid (60%)",
+            title: 'units.paid_60'.tr(),
           ),
           const SizedBox(height: 10),
 
           PaymentSummaryDetails(
             textColor: textColor.navActive,
             unitTotalPrice: unitTotalPrice,
-            title: "Remaining (40%)",
+            title: 'units.remaining_40'.tr(),
           ),
           const SizedBox(height: 20),
           const PaymentProgressBar(progress: 0.60),
