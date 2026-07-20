@@ -9,11 +9,7 @@ class InlineErrorBanner extends StatelessWidget {
   final Failure failure;
   final VoidCallback? onRetry;
 
-  const InlineErrorBanner({
-    super.key,
-    required this.failure,
-    this.onRetry,
-  });
+  const InlineErrorBanner({super.key, required this.failure, this.onRetry});
 
   @override
   Widget build(BuildContext context) {
@@ -39,20 +35,18 @@ class InlineErrorBanner extends StatelessWidget {
             ),
           ),
           if (ui.canRetry && onRetry != null)
-            TextButton(
-              onPressed: onRetry,
-              child: const Text('Retry'),
-            ),
+            TextButton(onPressed: onRetry, child: const Text('Retry')),
         ],
       ),
     );
   }
 }
 
-/// Same content, shown as a transient SnackBar instead of an inline
-/// widget — useful for a failed background action (e.g. "failed to
-/// mark as read") that shouldn't disrupt the current screen at all.
-void showErrorSnackBar(BuildContext context, Failure failure, {VoidCallback? onRetry}) {
+void showErrorSnackBar(
+  BuildContext context,
+  Failure failure, {
+  VoidCallback? onRetry,
+}) {
   final ui = failure.toUiModel();
   ScaffoldMessenger.of(context).showSnackBar(
     SnackBar(

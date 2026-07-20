@@ -6,7 +6,7 @@ import 'package:memar_degla/features/contrcats/presentation/views/document_scree
 import 'package:memar_degla/features/contrcats/presentation/views/my_contracts_details_screen.dart';
 import 'package:memar_degla/features/contrcats/presentation/views/my_contracts_screen.dart';
 import 'package:memar_degla/features/onboarding/presentation/views/onboarding_screen.dart';
-import 'package:memar_degla/features/authentication/presentation/views/profile_screen.dart';
+import 'package:memar_degla/features/profile/presentation/views/profile_screen.dart';
 import 'package:memar_degla/features/home/presentation/views/home_screen.dart';
 import 'package:memar_degla/features/points/presentation/views/offers_screen.dart';
 import 'package:memar_degla/features/points/presentation/views/redeem_points_screen.dart';

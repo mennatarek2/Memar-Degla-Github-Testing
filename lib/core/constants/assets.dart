@@ -74,6 +74,10 @@ class Assets {
   /// assets/images/declined.png
   static const String assetsImagesDeclined = "assets/images/declined.png";
 
+  /// Assets for assetsImagesDefaultProfile
+  /// assets/images/default_profile.jpg
+  static const String assetsImagesDefaultProfile = "assets/images/default_profile.jpg";
+
   /// Assets for assetsImagesDeglaBlackLogo
   /// assets/images/degla_black_logo.png
   static const String assetsImagesDeglaBlackLogo = "assets/images/degla_black_logo.png";

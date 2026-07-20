@@ -7,8 +7,8 @@ import 'package:memar_degla/core/routes/app_routes.dart';
 import 'package:memar_degla/core/styles/containers_style.dart';
 import 'package:memar_degla/core/themes/theme_extention.dart';
 import 'package:memar_degla/core/widgets/custom_red_button.dart';
-import 'package:memar_degla/features/authentication/presentation/views/widgets/profile_item_widget.dart';
-import 'package:memar_degla/features/authentication/presentation/views/widgets/user_contact_info_widget.dart';
+import 'package:memar_degla/features/profile/presentation/views/widgets/profile_item_widget.dart';
+import 'package:memar_degla/features/profile/presentation/views/widgets/user_contact_info_widget.dart';
 
 class ProfileScreenBody extends StatelessWidget {
   const ProfileScreenBody({super.key});
