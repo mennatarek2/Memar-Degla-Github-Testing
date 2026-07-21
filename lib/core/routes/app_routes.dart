@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:memar_degla/core/services/service_locator.dart';
 import 'package:memar_degla/features/authentication/presentation/views/login_screen.dart';
 import 'package:memar_degla/features/contrcats/data/models/contracts_models.dart';
 import 'package:memar_degla/features/contrcats/presentation/views/document_screen.dart';
@@ -10,6 +12,12 @@ import 'package:memar_degla/features/profile/presentation/views/profile_screen.d
 import 'package:memar_degla/features/home/presentation/views/home_screen.dart';
 import 'package:memar_degla/features/points/presentation/views/offers_screen.dart';
 import 'package:memar_degla/features/points/presentation/views/redeem_points_screen.dart';
+
+import 'package:memar_degla/features/settings/domain/usecases/get_notification_preferences.dart';
+import 'package:memar_degla/features/settings/domain/usecases/set_notification_channel_enabled.dart';
+
+import 'package:memar_degla/features/settings/presentation/manger/notifications/notifications_cubit.dart';
+import 'package:memar_degla/features/settings/presentation/views/settings_screen.dart';
 import 'package:memar_degla/features/splash/presentation/views/splash_screen.dart';
 import 'package:memar_degla/features/support/presentation/views/support_screen.dart';
 import 'package:memar_degla/features/units/data/models/unit_details_model.dart';
@@ -190,6 +198,24 @@ class AppRoutes {
         pageBuilder: (context, state) {
           return _fadeSlidePage(state: state, child: const OffersScreen());
         },
+      ),
+      GoRoute(
+        path: settings,
+        name: 'profile-settings',
+        pageBuilder: (context, state) => _fadeSlidePage(
+          state: state,
+          child: MultiBlocProvider(
+            providers: [
+              BlocProvider(
+                create: ((context) => NotificationsCubit(
+                  sl<GetNotificationPreferences>(),
+                  sl<SetNotificationChannelEnabled>(),
+                )),
+              ),
+            ],
+            child: const SettingsScreen(),
+          ),
+        ),
       ),
     ],
   );

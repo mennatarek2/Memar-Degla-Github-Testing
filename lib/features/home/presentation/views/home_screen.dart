@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:memar_degla/core/services/permissions_handler.dart';
 import 'package:memar_degla/core/widgets/custom_app_bar.dart';
@@ -12,7 +13,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(
-        title: 'Welcome Ahmed',
+        title: 'home.welcome_ahmed'.tr(),
         onNotificationPressed: () {
           PermissionService.instance.request(Permission.notification);
         },

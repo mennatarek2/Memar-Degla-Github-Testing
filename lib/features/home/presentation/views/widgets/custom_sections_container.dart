@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:memar_degla/core/constants/assets.dart';
@@ -48,8 +49,8 @@ class FeatureSectionDisplay extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      "Units",
-                      style: AppStyles.styleBold30(
+                      "nav.units".tr(),
+                      style: AppStyles.styleSemiBold24(
                         context,
                       ).copyWith(color: context.colors.textPrimary),
                     ),
@@ -113,11 +114,14 @@ class ContractDisplaySection extends StatelessWidget {
                 const SizedBox(height: 10),
                 Row(
                   children: [
-                    Text(
-                      "Contracts",
-                      style: AppStyles.styleBold30(
-                        context,
-                      ).copyWith(color: context.colors.textPrimary),
+                    FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Text(
+                        "contracts.my_contracts".tr(),
+                        style: AppStyles.styleSemiBold24(
+                          context,
+                        ).copyWith(color: context.colors.textPrimary),
+                      ),
                     ),
                     const Spacer(),
                     Icon(

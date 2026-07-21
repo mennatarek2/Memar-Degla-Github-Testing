@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:memar_degla/core/constants/app_padddings.dart';
 import 'package:memar_degla/core/widgets/custom_app_bar.dart';
@@ -9,10 +10,10 @@ class OffersScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: CustomAppBar(title: "Execlusive Offers"),
-      bottomNavigationBar: CustomizedNavigationBar(),
-      body: Padding(
+    return Scaffold(
+      appBar: CustomAppBar(title: 'contracts.exclusive_offers'.tr()),
+      bottomNavigationBar: const CustomizedNavigationBar(),
+      body: const Padding(
         padding: EdgeInsets.all(AppPaddings.horizontalPadding),
         child: OffersScreenBody(),
       ),

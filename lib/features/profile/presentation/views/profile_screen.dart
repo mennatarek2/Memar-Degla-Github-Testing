@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:memar_degla/core/widgets/custom_app_bar.dart';
 import 'package:memar_degla/core/widgets/custom_nav_bar.dart';
@@ -8,10 +9,10 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: CustomAppBar(title: "Profile"),
-      bottomNavigationBar: CustomizedNavigationBar(),
-      body: ProfileScreenBody(),
+    return Scaffold(
+      appBar: CustomAppBar(title: 'contracts.profile'.tr()),
+      bottomNavigationBar: const CustomizedNavigationBar(),
+      body: const ProfileScreenBody(),
     );
   }
 }

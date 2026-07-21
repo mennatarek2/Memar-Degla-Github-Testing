@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import 'package:memar_degla/core/constants/app_padddings.dart';
@@ -129,27 +130,35 @@ class OffersCard extends StatelessWidget {
                   size: 20,
                 ),
                 const SizedBox(width: 8),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Limited-time offer",
-                      style: AppStyles.styleSemiBold16(
-                        context,
-                      ).copyWith(color: Colors.white),
-                    ),
-                    Text(
-                      endDate,
-                      style: AppStyles.styleSemiBold16(
-                        context,
-                      ).copyWith(color: Colors.white.withValues(alpha: 0.75)),
-                    ),
-                  ],
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text(
+                          'points.limited_time_offer'.tr(),
+                          style: AppStyles.styleSemiBold16(
+                            context,
+                          ).copyWith(color: Colors.white),
+                        ),
+                      ),
+                      FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text(
+                          endDate,
+                          style: AppStyles.styleMedium13(context).copyWith(
+                            color: Colors.white.withValues(alpha: 0.75),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
                 const Spacer(),
                 Text(
-                  "Details",
-                  style: AppStyles.styleBold16(
+                  'units.details'.tr(),
+                  style: AppStyles.styleSemiBold16(
                     context,
                   ).copyWith(color: Colors.white),
                 ),

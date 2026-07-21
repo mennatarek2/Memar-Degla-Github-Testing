@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:memar_degla/core/widgets/custom_app_bar.dart';
 import 'package:memar_degla/features/contrcats/data/models/contracts_models.dart';
@@ -9,8 +10,7 @@ class MyContractsDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(title: "Contract Details"),
-
+      appBar: CustomAppBar(title: 'contracts.contract_details'.tr()),
       body: MyContractDetailsScreenBody(contract: contractsModels),
     );
   }

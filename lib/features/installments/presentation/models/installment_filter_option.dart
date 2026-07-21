@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:memar_degla/features/installments/domain/entities/bill_status_entity.dart';
 
 class InstallmentFilterOption {
@@ -8,9 +9,21 @@ class InstallmentFilterOption {
 }
 
 final List<InstallmentFilterOption> filterOptions = [
-  InstallmentFilterOption(label: 'All'),
-  InstallmentFilterOption(label: 'Due', status: BillStatus.due),
-  InstallmentFilterOption(label: 'Paid', status: BillStatus.paid),
-  InstallmentFilterOption(label: 'Overdue', status: BillStatus.overdue),
-  InstallmentFilterOption(label: 'Upcoming', status: BillStatus.upcoming),
+  InstallmentFilterOption(label: 'installments.all'.tr()),
+  InstallmentFilterOption(
+    label: 'installments.due'.tr(),
+    status: BillStatus.due,
+  ),
+  InstallmentFilterOption(
+    label: 'installments.paid'.tr(),
+    status: BillStatus.paid,
+  ),
+  InstallmentFilterOption(
+    label: 'installments.overdue'.tr(),
+    status: BillStatus.overdue,
+  ),
+  InstallmentFilterOption(
+    label: 'installments.upcoming'.tr(),
+    status: BillStatus.upcoming,
+  ),
 ];

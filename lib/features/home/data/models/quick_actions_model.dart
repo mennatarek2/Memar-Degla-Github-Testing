@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:memar_degla/core/constants/assets.dart';
 import 'package:memar_degla/core/routes/app_routes.dart';
@@ -19,34 +20,32 @@ class QuickActionsModel {
 List<QuickActionsModel> quickActionsModel = [
   QuickActionsModel(
     imagePath: Assets.assetsIconsCardIcon,
-    actionTitle: "Installment",
+    actionTitle: 'profile.installments'.tr(),
     imageColor: const Color(0xFF5620E0),
     navigationPath: AppRoutes.installments,
   ),
   QuickActionsModel(
     imagePath: Assets.assetsIconsContractIcon,
-    actionTitle: "Documents",
+    actionTitle: 'profile.documents'.tr(),
     imageColor: const Color(0XFF536DCF),
-    navigationPath: AppRoutes.contracts,
-    //TODO edit the navigation here this navigation path just for testing purpose
+    navigationPath: AppRoutes.documents,
   ),
   QuickActionsModel(
     imagePath: Assets.assetsIconsGiftIcon,
-    actionTitle: "Redeem",
+    actionTitle: 'points.redeem'.tr(),
     imageColor: const Color(0xFFD9A876),
     navigationPath: AppRoutes.redeem,
   ),
   QuickActionsModel(
     imagePath: Assets.assetsIconsSupport,
-    actionTitle: "Support",
+    actionTitle: 'profile.support'.tr(),
     imageColor: const Color(0XFF5FA3B4),
     navigationPath: AppRoutes.support,
   ),
   QuickActionsModel(
     imagePath: Assets.assetsIconsReferalIcon,
-    actionTitle: "Referal",
+    actionTitle: 'profile.referral'.tr(),
     imageColor: const Color(0XFF5B967A),
     navigationPath: AppRoutes.referrals,
   ),
 ];
-// TODO Edit the navgation path

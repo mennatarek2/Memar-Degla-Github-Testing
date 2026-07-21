@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 class PointsModel {
@@ -15,44 +16,40 @@ class PointsModel {
 }
 
 List<PointsModel> redeemPointsList = [
-  const PointsModel(
+  PointsModel(
     icon: Icons.payments_outlined,
-    title: "Installment Discount",
-    subtitle:
-        "Redeem your points to get a discount on your next installment payment.",
-    points: "2,500",
+    title: 'points.installment_discount'.tr(),
+    subtitle: 'points.installment_discount_desc'.tr(),
+    points: '2,500',
   ),
-  const PointsModel(
+  PointsModel(
     icon: Icons.apartment_outlined,
-    title: "New Unit Discount",
-    subtitle: "Receive a special discount when booking a new residential unit.",
-    points: "10,000",
+    title: 'points.new_unit_discount'.tr(),
+    subtitle: 'points.new_unit_discount_desc'.tr(),
+    points: '10,000',
   ),
-  const PointsModel(
+  PointsModel(
     icon: Icons.home_work_outlined,
-    title: "Property Upgrade",
-    subtitle:
-        "Use your points toward upgrading your selected unit or finishing package.",
-    points: "15,000",
+    title: 'points.property_upgrade'.tr(),
+    subtitle: 'points.property_upgrade_desc'.tr(),
+    points: '15,000',
   ),
-  const PointsModel(
+  PointsModel(
     icon: Icons.home_outlined,
-    title: "Interior Design Consultation",
-    subtitle:
-        "Redeem a free consultation session with our interior design team.",
-    points: "5,000",
+    title: 'points.interior_design_consultation'.tr(),
+    subtitle: 'points.interior_design_consultation_desc'.tr(),
+    points: '5,000',
   ),
-  const PointsModel(
+  PointsModel(
     icon: Icons.handyman_outlined,
-    title: "Maintenance Services",
-    subtitle: "Exchange your points for home maintenance and repair services.",
-    points: "3,500",
+    title: 'points.maintenance_services'.tr(),
+    subtitle: 'points.maintenance_services_desc'.tr(),
+    points: '3,500',
   ),
-  const PointsModel(
+  PointsModel(
     icon: Icons.local_parking_outlined,
-    title: "Parking Space Discount",
-    subtitle:
-        "Get a discount on purchasing or reserving an additional parking space.",
-    points: "7,500",
+    title: 'points.parking_space_discount'.tr(),
+    subtitle: 'points.parking_space_discount_desc'.tr(),
+    points: '7,500',
   ),
 ];

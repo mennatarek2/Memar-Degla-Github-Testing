@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:memar_degla/core/constants/app_padddings.dart';
@@ -72,16 +73,16 @@ class HomeScreenBody extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      "Active Offers",
-                      style: AppStyles.styleBold24(context),
+                      'home.active_offers'.tr(),
+                      style: AppStyles.styleSemiBold20(context),
                     ),
                     const Spacer(),
                     TextButton(
                       onPressed: () =>
                           GoRouter.of(context).push(AppRoutes.offers),
                       child: Text(
-                        "View All",
-                        style: AppStyles.styleBold20(
+                        'home.view_all'.tr(),
+                        style: AppStyles.styleSemiBold20(
                           context,
                         ).copyWith(color: context.colors.primaryGold),
                       ),

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import '../../error/failures.dart';
 import '../../presentation/failure_ui_mapper.dart';
@@ -35,7 +36,7 @@ class InlineErrorBanner extends StatelessWidget {
             ),
           ),
           if (ui.canRetry && onRetry != null)
-            TextButton(onPressed: onRetry, child: const Text('Retry')),
+            TextButton(onPressed: onRetry, child: Text('common.retry'.tr())),
         ],
       ),
     );
@@ -52,7 +53,7 @@ void showErrorSnackBar(
     SnackBar(
       content: Text(ui.message),
       action: ui.canRetry && onRetry != null
-          ? SnackBarAction(label: 'Retry', onPressed: onRetry)
+          ? SnackBarAction(label: 'common.retry'.tr(), onPressed: onRetry)
           : null,
     ),
   );

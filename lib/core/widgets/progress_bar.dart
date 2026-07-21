@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:memar_degla/core/themes/theme_extention.dart';
 
@@ -19,9 +20,9 @@ class PaymentProgressBar extends StatelessWidget {
       children: [
         Row(
           children: [
-            const Text(
-              'Payment Progress',
-              style: TextStyle(fontSize: 14, color: Colors.grey),
+            Text(
+              'units.PaymentProgress'.tr(),
+              style: const TextStyle(fontSize: 14, color: Colors.grey),
             ),
             const Spacer(),
             Text(

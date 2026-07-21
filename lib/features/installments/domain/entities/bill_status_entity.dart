@@ -5,9 +5,9 @@ enum BillStatus {
   due;
 
   String get label => switch (this) {
-    BillStatus.paid => "Paid",
-    BillStatus.upcoming => "Upcoming",
-    BillStatus.overdue => "Overdue",
-    BillStatus.due => "Due",
+    BillStatus.paid => 'installments.paid',
+    BillStatus.upcoming => 'installments.upcoming',
+    BillStatus.overdue => 'installments.overdue',
+    BillStatus.due => 'installments.due',
   };
 }

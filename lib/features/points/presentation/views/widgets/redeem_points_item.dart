@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:memar_degla/core/constants/assets.dart';
 import 'package:memar_degla/core/constants/app_padddings.dart';
@@ -43,7 +44,8 @@ class PointsItem extends StatelessWidget {
                       ).copyWith(color: context.colors.textSecondary),
                     ),
                     Text(
-                      '${item.points} Points',
+                      '${item.points}'
+                      "points.points_balance",
                       style: AppStyles.styleBold16(
                         context,
                       ).copyWith(color: context.colors.navActive),
@@ -55,11 +57,11 @@ class PointsItem extends StatelessWidget {
           ),
           const SizedBox(height: 12),
           CustomLoadingAuthButton(
-            title: 'Redeem',
+            title: 'points.redeem'.tr(),
             onPressed: () {
               ResponseSuccessCustomized.show(
                 context,
-                message: "Points Redeemed Sucessfully",
+                message: 'points.points_redeemed_successfully'.tr(),
                 imagePath: Assets.assetsImagesCheck,
                 // displayDuration: const Duration(milliseconds: 3),
               );

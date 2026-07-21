@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:memar_degla/core/constants/assets.dart';
@@ -42,7 +43,7 @@ class ProfileScreenBody extends StatelessWidget {
                     titleKey: 'profile.settings',
                     iconPath: Assets.assetsIconsSettingsIcon,
                     onTap: () {
-                      // TODO: Navigate to settings screen
+                      router.push(AppRoutes.settings);
                     },
                   ),
                   Divider(thickness: 1, color: context.colors.iconBackGround),
@@ -103,13 +104,13 @@ class ProfileScreenBody extends StatelessWidget {
               onPressed: () {
                 RedeemConfirmationDialog.show(
                   context,
-                  title: 'Log Out',
-                  message: 'Are you sure you want to Logout',
+                  title: 'settings_profile.logout'.tr(),
+                  message: 'settings_profile.logout_confirmation'.tr(),
                   onConfirm: () => GoRouter.of(context).pop(),
                   onCancel: () {},
                 );
               },
-              title: "Log out",
+              title: 'settings_profile.logout'.tr(),
             ),
           ],
         ),

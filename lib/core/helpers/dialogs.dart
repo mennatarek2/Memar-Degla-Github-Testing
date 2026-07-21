@@ -1,4 +1,5 @@
 // redeem_confirmation_dialog.dart
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:memar_degla/core/styles/text_styles.dart';
 import 'package:memar_degla/core/themes/theme_extention.dart';
@@ -32,8 +33,8 @@ class RedeemConfirmationDialog extends StatelessWidget {
     required String message,
     required VoidCallback onConfirm,
     required VoidCallback onCancel,
-    String confirmText = 'Confirm',
-    String cancelText = 'Cancel',
+    String confirmText = 'settings_profile.confirm',
+    String cancelText = 'settings_profile.cancel',
   }) {
     return showDialog(
       context: context,
@@ -74,7 +75,7 @@ class RedeemConfirmationDialog extends StatelessWidget {
             ),
             const SizedBox(height: 24),
             CustomLoadingAuthButton(
-              title: confirmText,
+              title: confirmText.tr(),
               onPressed: () {
                 Navigator.of(context).pop();
                 onConfirm();
@@ -82,7 +83,7 @@ class RedeemConfirmationDialog extends StatelessWidget {
             ),
             const SizedBox(height: 12),
             CustomRedButton(
-              title: cancelText,
+              title: cancelText.tr(),
               onPressed: () {
                 Navigator.of(context).pop();
                 onCancel();

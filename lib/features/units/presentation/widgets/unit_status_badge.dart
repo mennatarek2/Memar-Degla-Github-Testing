@@ -5,10 +5,7 @@ import 'package:memar_degla/features/units/domain/entities/unit_entity.dart';
 class UnitStatusBadge extends StatelessWidget {
   final UnitStatus status;
 
-  const UnitStatusBadge({
-    super.key,
-    required this.status,
-  });
+  const UnitStatusBadge({super.key, required this.status});
 
   Color _getStatusBackgroundColor(UnitStatus status) {
     return switch (status) {
@@ -44,14 +41,11 @@ class UnitStatusBadge extends StatelessWidget {
           Container(
             width: 8,
             height: 8,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: dotColor,
-            ),
+            decoration: BoxDecoration(shape: BoxShape.circle, color: dotColor),
           ),
           const SizedBox(width: 8),
           Text(
-            status.label,
+            status.label(context),
             style: TextStyle(
               color: dotColor,
               fontSize: 12,

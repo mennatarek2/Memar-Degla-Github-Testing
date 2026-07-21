@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:memar_degla/core/styles/text_styles.dart';
 import 'package:memar_degla/core/themes/theme_extention.dart';
@@ -33,7 +34,7 @@ class BillStatusContainer extends StatelessWidget {
           CircleAvatar(radius: 3, backgroundColor: statusColor),
           const SizedBox(width: 5),
           Text(
-            billStatus.label,
+            billStatus.label.tr(),
             style: AppStyles.styleSemiBold16(
               context,
             ).copyWith(color: statusColor),

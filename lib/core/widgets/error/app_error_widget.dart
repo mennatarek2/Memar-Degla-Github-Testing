@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import '../../error/failures.dart';
 import '../../presentation/failure_ui_mapper.dart';
@@ -36,7 +37,10 @@ class AppErrorWidget extends StatelessWidget {
             ),
             if (ui.canRetry && onRetry != null) ...[
               const SizedBox(height: 20),
-              FilledButton(onPressed: onRetry, child: const Text('Try again')),
+              FilledButton(
+                onPressed: onRetry,
+                child: Text('common.retry'.tr()),
+              ),
             ],
           ],
         ),

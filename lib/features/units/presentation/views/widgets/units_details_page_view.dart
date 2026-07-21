@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:memar_degla/core/styles/containers_style.dart';
@@ -7,7 +8,6 @@ import 'package:memar_degla/features/units/data/models/unit_details_model.dart';
 import 'package:memar_degla/features/units/presentation/manger/cubit/units_details_tab_cubit.dart';
 import 'package:memar_degla/features/units/presentation/views/widgets/details_page.dart';
 import 'package:memar_degla/features/units/presentation/views/widgets/floor_page.dart';
-
 
 class UnitsDetailsPageView extends StatelessWidget {
   const UnitsDetailsPageView({super.key, required this.unitDetailsModel});
@@ -58,7 +58,7 @@ class _TabSelector extends StatelessWidget {
         children: [
           Expanded(
             child: _TabButton(
-              label: 'Details',
+              label: 'units.details'.tr(),
               isSelected: selected == UnitDetailsTab.details,
               onTap: () => context.read<UnitDetailsTabCubit>().select(
                 UnitDetailsTab.details,
@@ -67,7 +67,7 @@ class _TabSelector extends StatelessWidget {
           ),
           Expanded(
             child: _TabButton(
-              label: 'Floor Plan',
+              label: 'units.floor_plan'.tr(),
               isSelected: selected == UnitDetailsTab.floorPlan,
               onTap: () => context.read<UnitDetailsTabCubit>().select(
                 UnitDetailsTab.floorPlan,

@@ -44,7 +44,6 @@
 //   }
 // }
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:memar_degla/core/styles/text_styles.dart';
 import 'package:memar_degla/core/themes/theme_extention.dart';
 import 'package:memar_degla/core/widgets/animated_bell.dart';

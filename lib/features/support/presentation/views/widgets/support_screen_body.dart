@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:memar_degla/core/constants/app_padddings.dart';
@@ -11,8 +12,8 @@ class SupportScreenBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(
+    return Padding(
+      padding: const EdgeInsets.symmetric(
         horizontal: AppPaddings.horizontalPadding,
         vertical: AppPaddings.verticalPadding,
       ),
@@ -26,28 +27,28 @@ class SupportScreenBody extends StatelessWidget {
                   children: [
                     Expanded(
                       child: ReachUs(
-                        title: "WhatsApp",
-                        subTitle: "Quick Responses",
+                        title: 'support.whatsapp'.tr(),
+                        subTitle: 'support.quick_responses'.tr(),
                         icon: FontAwesomeIcons.whatsapp,
                       ),
                     ),
-                    SizedBox(width: 20),
+                    const SizedBox(width: 20),
                     Expanded(
                       child: ReachUs(
-                        title: "Call Us",
-                        subTitle: "Available 24/7",
+                        title: 'support.call_us'.tr(),
+                        subTitle: 'support.available_24_7'.tr(),
                         icon: FontAwesomeIcons.phone,
                       ),
                     ),
                   ],
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
               ],
             ),
           ),
-          SliverToBoxAdapter(child: FrequetlyAskedQuestionsList()),
+          const SliverToBoxAdapter(child: FrequetlyAskedQuestionsList()),
 
-          SliverToBoxAdapter(
+          const SliverToBoxAdapter(
             child: Column(
               children: [
                 SizedBox(height: 20),

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:memar_degla/core/constants/app_padddings.dart';
 import 'package:memar_degla/core/styles/containers_style.dart';
@@ -10,7 +11,7 @@ class FloorPlanPage extends StatelessWidget {
     return Container(
       decoration: ContainersStyle.profileItemContainer(context),
       padding: const EdgeInsets.all(AppPaddings.containerPadding),
-      child: const Column(children: [Text("Floor Plan Placeholder")]),
+      child: Column(children: [Text('units.floor_plan'.tr())]),
     );
   }
 }
