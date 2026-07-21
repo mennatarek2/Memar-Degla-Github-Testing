@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:memar_degla/core/styles/containers_style.dart';
+import 'package:memar_degla/core/styles/text_styles.dart';
 
 import 'package:memar_degla/core/themes/theme_extention.dart';
 
@@ -21,7 +22,8 @@ class InstallmentInfoItem extends StatelessWidget {
       padding: const EdgeInsets.all(12),
 
       decoration: ContainersStyle.profileItemContainer(context),
-      child: Row(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
             padding: const EdgeInsets.all(8),
@@ -29,23 +31,30 @@ class InstallmentInfoItem extends StatelessWidget {
             child: Icon(icon, color: context.colors.primaryGold, size: 20),
           ),
           const SizedBox(width: 10),
+          const SizedBox(height: 10),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.min,
+
               children: [
-                Text(
-                  label,
-                  style: const TextStyle(fontSize: 11, color: Colors.grey),
-                  overflow: TextOverflow.ellipsis,
-                ),
-                Text(
-                  value,
-                  style: const TextStyle(
-                    fontSize: 13,
-                    fontWeight: FontWeight.w600,
+                Expanded(
+                  child: Text(
+                    label,
+                    style: AppStyles.styleSemiBold16(
+                      context,
+                    ).copyWith(color: context.colors.textSecondary),
+                    overflow: TextOverflow.ellipsis,
                   ),
-                  overflow: TextOverflow.ellipsis,
+                ),
+                FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    value,
+                    style: AppStyles.styleBold20(
+                      context,
+                    ).copyWith(color: context.colors.textPrimary),
+                    overflow: TextOverflow.ellipsis,
+                  ),
                 ),
               ],
             ),

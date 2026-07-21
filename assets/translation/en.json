@@ -69,9 +69,17 @@
   "installments": {
     "all": "All",
     "due": "Due",
+    "dueDate": "Due Date",
     "paid": "Paid",
     "overdue": "Overdue",
-    "upcoming": "Upcoming"
+    "upcoming": "Upcoming",
+    "unitCode": "Unit Code",
+    "method": "Payment Method",
+    "status": "Status",
+    "egp": "EGP",
+    "payNow": "Pay Now",
+    "contracts": "Contract",
+    "installments_details": "Installment Details"
   },
   "support": {
     "contact_form": "Contact Form",

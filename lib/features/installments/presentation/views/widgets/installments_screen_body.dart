@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:memar_degla/core/routes/app_routes.dart';
 import 'package:memar_degla/features/installments/data/models/installment_model.dart';
 import 'package:memar_degla/features/installments/presentation/models/installment_filter_option.dart';
 import 'package:memar_degla/features/installments/presentation/views/widgets/installment_card.dart';
@@ -60,8 +62,10 @@ class _InstallmentsScreenBodyState extends State<InstallmentsScreenBody> {
               return InstallmentCard(
                 installment: _filteredInstallments[index],
                 onTap: () {
-                  // Navigate to installment details
-                  // You can implement navigation here
+                  GoRouter.of(context).push(
+                    AppRoutes.installmentsDetails,
+                    extra: _filteredInstallments[index],
+                  );
                 },
               );
             },

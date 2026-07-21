@@ -7,6 +7,8 @@ import 'package:memar_degla/features/contrcats/data/models/contracts_models.dart
 import 'package:memar_degla/features/contrcats/presentation/views/document_screen.dart';
 import 'package:memar_degla/features/contrcats/presentation/views/my_contracts_details_screen.dart';
 import 'package:memar_degla/features/contrcats/presentation/views/my_contracts_screen.dart';
+import 'package:memar_degla/features/installments/data/models/installment_model.dart';
+import 'package:memar_degla/features/installments/presentation/views/installments_details_screen.dart';
 import 'package:memar_degla/features/onboarding/presentation/views/onboarding_screen.dart';
 import 'package:memar_degla/features/profile/presentation/views/profile_screen.dart';
 import 'package:memar_degla/features/home/presentation/views/home_screen.dart';
@@ -27,8 +29,31 @@ import 'package:memar_degla/features/installments/presentation/views/installment
 
 class AppRoutes {
   static const String installments = '/profile/installments';
-  static const String installmentsDetails = 'profile/instalmmentsDetails';
+  static const String installmentsDetails = '/profile/instalmmentsDetails';
   static const String offersAndPoints = '/offers';
+  static const String splash = '/';
+  static const String onBoarding = '/onboarding';
+  static const String login = '/login';
+  static const String home = '/home';
+  static const String profile = '/profile';
+
+  static const String units = '/profile/units';
+  static const String unitDetails = '/profile/units/details';
+
+  static const String contracts = '/profile/contracts';
+  static const String myCoontractsDetails = '/profile/contracts/details';
+
+  static const String support = '/support';
+
+  static const String offers = '/offers';
+
+  static const String redeem = '/offers/redeem';
+
+  static const String documents = '/contracts/documents';
+
+  static const String settings = '/profile/settings';
+  static const String wallet = '/wallet';
+  static const String referrals = '/profile/referal';
 
   static CustomTransitionPage<void> _fadeSlidePage({
     required GoRouterState state,
@@ -80,7 +105,7 @@ class AppRoutes {
   }
 
   static final GoRouter router = GoRouter(
-    initialLocation: installments,
+    initialLocation: splash,
     routes: [
       GoRoute(
         path: splash,
@@ -123,6 +148,17 @@ class AppRoutes {
         name: 'installments',
         pageBuilder: (context, state) =>
             _fadeSlidePage(state: state, child: const InstallmentsScreen()),
+      ),
+      GoRoute(
+        path: installmentsDetails,
+        name: 'installmentsDetails',
+        pageBuilder: (context, state) {
+          final installmentDetails = state.extra as InstallmentModel;
+          return _fadeSlidePage(
+            state: state,
+            child: InstallmentsDetailsScreen(installment: installmentDetails),
+          );
+        },
       ),
       GoRoute(
         path: contracts,

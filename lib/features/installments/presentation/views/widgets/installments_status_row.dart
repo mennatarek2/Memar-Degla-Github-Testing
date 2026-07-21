@@ -11,19 +11,29 @@ class InstallmentStatusRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Icon(status.icon, color: status.color, size: 18),
-        const SizedBox(width: 6),
-        Text(
-          status.label.tr(),
-          style: TextStyle(
-            color: status.color,
-            fontWeight: FontWeight.w600,
-            fontSize: 14,
-          ),
+    return Container(
+      padding: const EdgeInsets.all(4),
+      decoration: ShapeDecoration(
+        color: status.color.withValues(alpha: 0.4),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadiusGeometry.circular(12),
         ),
-      ],
+      ),
+      child: Row(
+        children: [
+          CircleAvatar(radius: 5, backgroundColor: status.color),
+
+          const SizedBox(width: 6),
+          Text(
+            status.label.tr(),
+            style: TextStyle(
+              color: status.color,
+              fontWeight: FontWeight.w600,
+              fontSize: 14,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

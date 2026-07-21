@@ -23,14 +23,14 @@ class InstallmentInfoGrid extends StatelessWidget {
         value: installment.unitCode,
       ),
       (
-        icon: Icons.payments_outlined,
-        label: 'installments.amount'.tr(),
-        value: '${installment.price} ${'installments.egp'.tr()}',
+        icon: Icons.payment_outlined,
+        label: 'installments.method'.tr(),
+        value: '-',
       ),
       (
-        icon: installment.billStatus.icon,
-        label: 'installments.status'.tr(),
-        value: installment.billStatus.label.tr(),
+        icon: Icons.document_scanner,
+        label: 'installments.contracts'.tr(),
+        value: 'CNT-2024-0042',
       ),
     ];
 
@@ -42,7 +42,7 @@ class InstallmentInfoGrid extends StatelessWidget {
         crossAxisCount: 2,
         crossAxisSpacing: 10,
         mainAxisSpacing: 10,
-        childAspectRatio: 2.6,
+        childAspectRatio: 1.5,
       ),
       itemBuilder: (context, index) {
         final item = items[index];

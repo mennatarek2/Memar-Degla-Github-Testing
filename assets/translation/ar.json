@@ -69,9 +69,17 @@
   "installments": {
     "all": "الكل",
     "due": "مستحق",
+    "dueDate": "تاريخ الاستحقاق",
     "paid": "مدفوع",
     "overdue": "متأخر",
-    "upcoming": "قادم"
+    "upcoming": "قادم",
+    "unitCode": "كود الوحدة",
+    "method": "طريقة الدفع",
+    "status": "الحالة",
+    "egp": "EGP",
+    "payNow": "ادفع الآن",
+    "contracts": "العقد",
+    "installments_details": "تفاصيل القسط"
   },
   "support": {
     "contact_form": "نموذج الاتصال",
