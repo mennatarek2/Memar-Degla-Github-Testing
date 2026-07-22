@@ -40,7 +40,15 @@
     "installments": "Installments",
     "referral": "Referral",
     "documents": "Documents",
-    "support": "Support"
+    "support": "Support",
+    "edit_profile_details": "Edit Profile Details",
+    "tap_to_change_photo": "Tap to change the photo",
+    "full_name": "Full name",
+    "email": "Email",
+    "phone_number": "Phone number",
+    "customer_code": "Customer code",
+    "save_changes": "Save Changes",
+    "profile_description": "Well Structured File"
   },
   "nav": {
     "home": "Home",

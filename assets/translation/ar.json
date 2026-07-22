@@ -40,7 +40,14 @@
     "installments": "الأقساط",
     "referral": "الإحالة",
     "documents": "المستندات",
-    "support": "الدعم"
+    "support": "الدعم",
+    "edit_profile_details": "تعديل بيانات الملف الشخصي",
+    "tap_to_change_photo": "اضغط لتغيير الصورة",
+    "full_name": "الاسم بالكامل",
+    "email": "البريد الإلكتروني",
+    "phone_number": "رقم الهاتف",
+    "customer_code": "كود العميل",
+    "save_changes": "حفظ التغييرات"
   },
   "nav": {
     "home": "الرئيسية",

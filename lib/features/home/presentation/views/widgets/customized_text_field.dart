@@ -39,7 +39,7 @@ class CustomizedTextField extends StatelessWidget {
       onChanged: onChanged,
       // style: TextStyle(color: colors.lightPrimaryFont),
       decoration: InputDecoration(
-        labelText: label,
+        hintText: label,
         helperStyle: TextStyle(color: colors.textPrimary),
 
         fillColor: colors.textSecondary.withValues(alpha: 0.1),

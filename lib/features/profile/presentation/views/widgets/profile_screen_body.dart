@@ -8,6 +8,7 @@ import 'package:memar_degla/core/routes/app_routes.dart';
 import 'package:memar_degla/core/styles/containers_style.dart';
 import 'package:memar_degla/core/themes/theme_extention.dart';
 import 'package:memar_degla/core/widgets/custom_red_button.dart';
+import 'package:memar_degla/features/profile/presentation/views/widgets/profile_card_widget.dart';
 import 'package:memar_degla/features/profile/presentation/views/widgets/profile_item_widget.dart';
 import 'package:memar_degla/features/profile/presentation/views/widgets/user_contact_info_widget.dart';
 
@@ -25,6 +26,13 @@ class ProfileScreenBody extends StatelessWidget {
         ),
         child: Column(
           children: [
+            // Profile Card Widget
+            const ProfileCardWidget(
+              userName: 'Ahmed Al-Rashid',
+              userID: 'CUST-00482',
+              userTier: 'GOLD',
+            ),
+            const SizedBox(height: 24),
             // User Contact Info Widget
             const UserContactInfoWidget(
               email: 'ahmed@email.com',

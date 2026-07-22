@@ -10,6 +10,7 @@ import 'package:memar_degla/features/contrcats/presentation/views/my_contracts_s
 import 'package:memar_degla/features/installments/data/models/installment_model.dart';
 import 'package:memar_degla/features/installments/presentation/views/installments_details_screen.dart';
 import 'package:memar_degla/features/onboarding/presentation/views/onboarding_screen.dart';
+import 'package:memar_degla/features/profile/presentation/views/edit_profile_screen.dart';
 import 'package:memar_degla/features/profile/presentation/views/profile_screen.dart';
 import 'package:memar_degla/features/home/presentation/views/home_screen.dart';
 import 'package:memar_degla/features/points/presentation/views/offers_screen.dart';
@@ -36,6 +37,7 @@ class AppRoutes {
   static const String login = '/login';
   static const String home = '/home';
   static const String profile = '/profile';
+  static const String editProfile = '/profile/edit';
 
   static const String units = '/profile/units';
   static const String unitDetails = '/profile/units/details';
@@ -136,6 +138,12 @@ class AppRoutes {
         name: 'profile',
         pageBuilder: (context, state) =>
             _fadeSlidePage(state: state, child: const ProfileScreen()),
+      ),
+      GoRoute(
+        path: editProfile,
+        name: 'editProfile',
+        pageBuilder: (context, state) =>
+            _fadeSlidePage(state: state, child: const EditProfileScreen()),
       ),
       GoRoute(
         path: units,
