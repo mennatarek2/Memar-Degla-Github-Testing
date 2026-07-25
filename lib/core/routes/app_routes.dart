@@ -27,6 +27,7 @@ import 'package:memar_degla/features/units/data/models/unit_details_model.dart';
 import 'package:memar_degla/features/units/presentation/views/unit_details_screen.dart';
 import 'package:memar_degla/features/units/presentation/views/units_screen.dart';
 import 'package:memar_degla/features/installments/presentation/views/installments_screen.dart';
+import 'package:memar_degla/features/wallets/presentation/views/wallet_screen.dart';
 
 class AppRoutes {
   static const String installments = '/profile/installments';
@@ -216,7 +217,12 @@ class AppRoutes {
           );
         },
       ),
-
+      GoRoute(
+        path: wallet,
+        name: 'wallt',
+        pageBuilder: (context, state) =>
+            _fadeOnlyPage(state: state, child: const WalletScreen()),
+      ),
       GoRoute(
         path: offers,
         name: 'offers',

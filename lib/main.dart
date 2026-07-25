@@ -1,4 +1,6 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:memar_degla/core/routes/app_routes.dart';
@@ -14,23 +16,6 @@ void main() async {
   await EasyLocalization.ensureInitialized();
   await initServiceLocator();
 
-  // runApp(
-  //   EasyLocalization(
-  //     supportedLocales: const [Locale('en'), Locale('ar')],
-  //     path: 'assets/translation',
-  //     fallbackLocale: const Locale('en'),
-  //     saveLocale: true,
-
-  //     child: DevicePreview(
-  //       enabled: !kReleaseMode,
-  //       builder: (context) => BlocProvider(
-  //         create: (_) => sl<ProfilePictureCubit>(),
-  //         child: const MemarDegla(),
-  //       ),
-  //     ),
-  //   ),
-  // );
-
   runApp(
     EasyLocalization(
       supportedLocales: const [Locale('en'), Locale('ar')],
@@ -38,16 +23,37 @@ void main() async {
       fallbackLocale: const Locale('en'),
       saveLocale: true,
 
-      child: MultiBlocProvider(
-        providers: [
-          BlocProvider(create: (_) => sl<ProfilePictureCubit>()),
+      child: DevicePreview(
+        enabled: !kReleaseMode,
+        builder: (context) => MultiBlocProvider(
+          providers: [
+            BlocProvider(create: (_) => sl<ProfilePictureCubit>()),
 
-          BlocProvider.value(value: sl<ThemeCubit>()),
-        ],
-        child: const MemarDegla(),
+            BlocProvider.value(value: sl<ThemeCubit>()),
+          ],
+          child: const MemarDegla(),
+        ),
       ),
     ),
   );
+
+  // runApp(
+  //   EasyLocalization(
+  //     supportedLocales: const [Locale('en'), Locale('ar')],
+  //     path: 'assets/translation',
+  //     fallbackLocale: const Locale('en'),
+  //     saveLocale: true,
+
+  //     child: MultiBlocProvider(
+  //       providers: [
+  //         BlocProvider(create: (_) => sl<ProfilePictureCubit>()),
+
+  //         BlocProvider.value(value: sl<ThemeCubit>()),
+  //       ],
+  //       child: const MemarDegla(),
+  //     ),
+  //   ),
+  // );
 }
 
 class MemarDegla extends StatelessWidget {
@@ -58,8 +64,8 @@ class MemarDegla extends StatelessWidget {
     return BlocBuilder<ThemeCubit, SettingsThemeState>(
       builder: (context, themeState) {
         return MaterialApp.router(
-          // useInheritedMediaQuery: true,
-          // builder: DevicePreview.appBuilder,
+          useInheritedMediaQuery: true,
+          builder: DevicePreview.appBuilder,
           darkTheme: AppTheme.dark,
           themeMode: themeState.mode == AppThemeMode.light
               ? ThemeMode.light

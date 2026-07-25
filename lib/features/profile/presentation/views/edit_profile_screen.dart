@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:memar_degla/core/styles/text_styles.dart';
 import 'package:memar_degla/core/themes/theme_extention.dart';
 import 'package:memar_degla/core/widgets/custom_app_bar.dart';
+import 'package:memar_degla/core/widgets/custom_nav_bar.dart';
 import 'package:memar_degla/features/authentication/presentation/views/widgets/custom_loading_auth_button.dart';
 import 'package:memar_degla/features/authentication/presentation/views/widgets/email_text_field.dart';
 import 'package:memar_degla/features/home/presentation/views/widgets/customized_text_field.dart';
@@ -36,6 +37,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
 
     return Scaffold(
       appBar: CustomAppBar(title: 'profile.edit_profile_details'.tr()),
+      bottomNavigationBar: const CustomizedNavigationBar(),
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.fromLTRB(20, 24, 20, 32),
