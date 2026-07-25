@@ -49,11 +49,18 @@ class RedeemPointsScreenBody extends StatelessWidget {
                               context,
                             ).copyWith(color: color.textSecondary),
                           ),
-                          Text(
-                            '12,450'
-                                    "points.points_balance"
-                                .tr(),
-                            style: AppStyles.styleSemiBold24(context),
+                          Row(
+                            children: [
+                              Text(
+                                '12,450',
+                                style: AppStyles.styleSemiBold24(context),
+                              ),
+                              const SizedBox(width: 3),
+                              Text(
+                                "points.points_balance".tr(),
+                                style: AppStyles.styleSemiBold24(context),
+                              ),
+                            ],
                           ),
                         ],
                       ),

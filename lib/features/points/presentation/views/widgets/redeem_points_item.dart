@@ -43,12 +43,22 @@ class PointsItem extends StatelessWidget {
                         context,
                       ).copyWith(color: context.colors.textSecondary),
                     ),
-                    Text(
-                      '${item.points}'
-                      "points.points_balance",
-                      style: AppStyles.styleBold16(
-                        context,
-                      ).copyWith(color: context.colors.navActive),
+                    Row(
+                      children: [
+                        Text(
+                          item.points,
+                          style: AppStyles.styleBold16(
+                            context,
+                          ).copyWith(color: context.colors.navActive),
+                        ),
+                        const SizedBox(width: 3),
+                        Text(
+                          "points.points_balance".tr(),
+                          style: AppStyles.styleBold16(
+                            context,
+                          ).copyWith(color: context.colors.navActive),
+                        ),
+                      ],
                     ),
                   ],
                 ),
